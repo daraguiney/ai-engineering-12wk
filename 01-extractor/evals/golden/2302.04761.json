@@ -1,0 +1,23 @@
+{
+  "arxiv_id": "2302.04761",
+  "source_text": "Title: Toolformer: Language Models Can Teach Themselves to Use Tools\nAuthors: Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Roberta Raileanu, Maria Lomeli, Luke Zettlemoyer, Nicola Cancedda, Thomas Scialom\n\nAbstract: Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller models excel. In this paper, we show that LMs can teach themselves to use external tools via simple APIs and achieve the best of both worlds. We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q\\&A system, two different search engines, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.",
+  "expected": {
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "authors": [
+      "Timo Schick",
+      "Jane Dwivedi-Yu",
+      "Roberto Dessì",
+      "Roberta Raileanu",
+      "Maria Lomeli",
+      "Luke Zettlemoyer",
+      "Nicola Cancedda",
+      "Thomas Scialom"
+    ],
+    "problem": "Language models solve new tasks from few examples or instructions, yet struggle with basic functionality such as arithmetic or factual lookup, where much simpler and smaller models excel.",
+    "method": "Toolformer is a model trained in a self-supervised way to decide which APIs to call, when to call them, what arguments to pass, and how to incorporate the results into future token prediction, requiring only a handful of demonstrations for each API. It incorporates a calculator, a Q&A system, two search engines, a translation system, and a calendar.",
+    "datasets": [],
+    "key_results": [],
+    "limitations": []
+  },
+  "reviewed": false
+}

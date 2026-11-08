@@ -5,9 +5,9 @@ from extractor.prompts import load_prompt
 from extractor.schema import PaperExtraction
 
 DEFAULT_MODEL = "claude-sonnet-5-5"
-DEFAULT_PROMPT_VERSION = "v1"
+DEFAULT_PROMPT_VERSION = "v2"
 DEFAULT_MAX_RETRIES = 3
-MAX_OUTPUT_TOKENS = 2048
+MAX_OUTPUT_TOKENS = 8192  # long author lists (e.g. GPT-4 report) need headroom
 
 
 def make_client() -> instructor.Instructor:

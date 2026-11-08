@@ -1,0 +1,48 @@
+{
+  "arxiv_id": "2112.04426",
+  "source_text": "Title: Improving language models by retrieving from trillions of tokens\nAuthors: Sebastian Borgeaud, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, Jean-Baptiste Lespiau, Bogdan Damoc, Aidan Clark, Diego de Las Casas, Aurelia Guy, Jacob Menick, Roman Ring, Tom Hennigan, Saffron Huang, Loren Maggiore, Chris Jones, Albin Cassirer, Andy Brock, Michela Paganini, Geoffrey Irving, Oriol Vinyals, Simon Osindero, Karen Simonyan, Jack W. Rae, Erich Elsen, Laurent Sifre\n\nAbstract: We enhance auto-regressive language models by conditioning on document chunks retrieved from a large corpus, based on local similarity with preceding tokens. With a $2$ trillion token database, our Retrieval-Enhanced Transformer (RETRO) obtains comparable performance to GPT-3 and Jurassic-1 on the Pile, despite using 25$\\times$ fewer parameters. After fine-tuning, RETRO performance translates to downstream knowledge-intensive tasks such as question answering. RETRO combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism to predict tokens based on an order of magnitude more data than what is typically consumed during training. We typically train RETRO from scratch, yet can also rapidly RETROfit pre-trained transformers with retrieval and still achieve good performance. Our work opens up new avenues for improving language models through explicit memory at unprecedented scale.",
+  "expected": {
+    "title": "Improving language models by retrieving from trillions of tokens",
+    "authors": [
+      "Sebastian Borgeaud",
+      "Arthur Mensch",
+      "Jordan Hoffmann",
+      "Trevor Cai",
+      "Eliza Rutherford",
+      "Katie Millican",
+      "George van den Driessche",
+      "Jean-Baptiste Lespiau",
+      "Bogdan Damoc",
+      "Aidan Clark",
+      "Diego de Las Casas",
+      "Aurelia Guy",
+      "Jacob Menick",
+      "Roman Ring",
+      "Tom Hennigan",
+      "Saffron Huang",
+      "Loren Maggiore",
+      "Chris Jones",
+      "Albin Cassirer",
+      "Andy Brock",
+      "Michela Paganini",
+      "Geoffrey Irving",
+      "Oriol Vinyals",
+      "Simon Osindero",
+      "Karen Simonyan",
+      "Jack W. Rae",
+      "Erich Elsen",
+      "Laurent Sifre"
+    ],
+    "problem": "Auto-regressive language models are improved by conditioning on external information, but the paper asks how to enhance them using retrieval from a very large corpus rather than relying only on model size and training data.",
+    "method": "RETRO (Retrieval-Enhanced Transformer) conditions auto-regressive language models on document chunks retrieved from a large corpus based on local similarity with preceding tokens. It combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism.",
+    "datasets": [
+      "the Pile"
+    ],
+    "key_results": [
+      "RETRO with a 2 trillion token database obtains performance comparable to GPT-3 and Jurassic-1 on the Pile",
+      "RETRO uses 25× fewer parameters than GPT-3 and Jurassic-1"
+    ],
+    "limitations": []
+  },
+  "reviewed": false
+}

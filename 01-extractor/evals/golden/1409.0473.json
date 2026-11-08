@@ -1,0 +1,20 @@
+{
+  "arxiv_id": "1409.0473",
+  "source_text": "Title: Neural Machine Translation by Jointly Learning to Align and Translate\nAuthors: Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio\n\nAbstract: Neural machine translation is a recently proposed approach to machine translation. Unlike the traditional statistical machine translation, the neural machine translation aims at building a single neural network that can be jointly tuned to maximize the translation performance. The models proposed recently for neural machine translation often belong to a family of encoder-decoders and consists of an encoder that encodes a source sentence into a fixed-length vector from which a decoder generates a translation. In this paper, we conjecture that the use of a fixed-length vector is a bottleneck in improving the performance of this basic encoder-decoder architecture, and propose to extend this by allowing a model to automatically (soft-)search for parts of a source sentence that are relevant to predicting a target word, without having to form these parts as a hard segment explicitly. With this new approach, we achieve a translation performance comparable to the existing state-of-the-art phrase-based system on the task of English-to-French translation. Furthermore, qualitative analysis reveals that the (soft-)alignments found by the model agree well with our intuition.",
+  "expected": {
+    "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "authors": [
+      "Dzmitry Bahdanau",
+      "Kyunghyun Cho",
+      "Yoshua Bengio"
+    ],
+    "problem": "Encoder-decoder neural machine translation models compress a source sentence into a fixed-length vector, which the authors conjecture is a bottleneck for performance.",
+    "method": "Extend the encoder-decoder so the model automatically (soft-)searches for the parts of the source sentence relevant to predicting each target word, without forming these parts as explicit hard segments.",
+    "datasets": [],
+    "key_results": [
+      "Translation performance comparable to the existing state-of-the-art phrase-based system on English-to-French translation"
+    ],
+    "limitations": []
+  },
+  "reviewed": false
+}

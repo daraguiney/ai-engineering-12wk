@@ -1,0 +1,58 @@
+{
+  "arxiv_id": "2210.11416",
+  "source_text": "Title: Scaling Instruction-Finetuned Language Models\nAuthors: Hyung Won Chung, Le Hou, Shayne Longpre, Barret Zoph, Yi Tay, William Fedus, Yunxuan Li, Xuezhi Wang, Mostafa Dehghani, Siddhartha Brahma, Albert Webson, Shixiang Shane Gu, Zhuyun Dai, Mirac Suzgun, Xinyun Chen, Aakanksha Chowdhery, Alex Castro-Ros, Marie Pellat, Kevin Robinson, Dasha Valter, Sharan Narang, Gaurav Mishra, Adams Yu, Vincent Zhao, Yanping Huang, Andrew Dai, Hongkun Yu, Slav Petrov, Ed H. Chi, Jeff Dean, Jacob Devlin, Adam Roberts, Denny Zhou, Quoc V. Le, Jason Wei\n\nAbstract: Finetuning language models on a collection of datasets phrased as instructions has been shown to improve model performance and generalization to unseen tasks. In this paper we explore instruction finetuning with a particular focus on (1) scaling the number of tasks, (2) scaling the model size, and (3) finetuning on chain-of-thought data. We find that instruction finetuning with the above aspects dramatically improves performance on a variety of model classes (PaLM, T5, U-PaLM), prompting setups (zero-shot, few-shot, CoT), and evaluation benchmarks (MMLU, BBH, TyDiQA, MGSM, open-ended generation). For instance, Flan-PaLM 540B instruction-finetuned on 1.8K tasks outperforms PALM 540B by a large margin (+9.4% on average). Flan-PaLM 540B achieves state-of-the-art performance on several benchmarks, such as 75.2% on five-shot MMLU. We also publicly release Flan-T5 checkpoints, which achieve strong few-shot performance even compared to much larger models, such as PaLM 62B. Overall, instruction finetuning is a general method for improving the performance and usability of pretrained language models.",
+  "expected": {
+    "title": "Scaling Instruction-Finetuned Language Models",
+    "authors": [
+      "Hyung Won Chung",
+      "Le Hou",
+      "Shayne Longpre",
+      "Barret Zoph",
+      "Yi Tay",
+      "William Fedus",
+      "Yunxuan Li",
+      "Xuezhi Wang",
+      "Mostafa Dehghani",
+      "Siddhartha Brahma",
+      "Albert Webson",
+      "Shixiang Shane Gu",
+      "Zhuyun Dai",
+      "Mirac Suzgun",
+      "Xinyun Chen",
+      "Aakanksha Chowdhery",
+      "Alex Castro-Ros",
+      "Marie Pellat",
+      "Kevin Robinson",
+      "Dasha Valter",
+      "Sharan Narang",
+      "Gaurav Mishra",
+      "Adams Yu",
+      "Vincent Zhao",
+      "Yanping Huang",
+      "Andrew Dai",
+      "Hongkun Yu",
+      "Slav Petrov",
+      "Ed H. Chi",
+      "Jeff Dean",
+      "Jacob Devlin",
+      "Adam Roberts",
+      "Denny Zhou",
+      "Quoc V. Le",
+      "Jason Wei"
+    ],
+    "problem": "Instruction finetuning on collections of tasks phrased as instructions improves performance and generalization to unseen tasks, but the effects of scaling the number of tasks, the model size, and adding chain-of-thought data are to be explored.",
+    "method": "The paper explores instruction finetuning with a focus on scaling the number of finetuning tasks, scaling the model size, and finetuning on chain-of-thought data, applied to model classes including PaLM, T5, and U-PaLM.",
+    "datasets": [
+      "MMLU",
+      "BBH",
+      "TyDiQA",
+      "MGSM"
+    ],
+    "key_results": [
+      "Flan-PaLM 540B instruction-finetuned on 1.8K tasks outperforms PaLM 540B by +9.4% on average",
+      "Flan-PaLM 540B achieves 75.2% on five-shot MMLU"
+    ],
+    "limitations": []
+  },
+  "reviewed": false
+}

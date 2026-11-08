@@ -1,0 +1,25 @@
+{
+  "arxiv_id": "2006.11239",
+  "source_text": "Title: Denoising Diffusion Probabilistic Models\nAuthors: Jonathan Ho, Ajay Jain, Pieter Abbeel\n\nAbstract: We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. Our implementation is available at https://github.com/hojonathanho/diffusion",
+  "expected": {
+    "title": "Denoising Diffusion Probabilistic Models",
+    "authors": [
+      "Jonathan Ho",
+      "Ajay Jain",
+      "Pieter Abbeel"
+    ],
+    "problem": "The paper addresses high quality image synthesis using diffusion probabilistic models, a class of latent variable models inspired by nonequilibrium thermodynamics.",
+    "method": "The authors train diffusion probabilistic models on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics. The models also admit a progressive lossy decompression scheme interpretable as a generalization of autoregressive decoding.",
+    "datasets": [
+      "CIFAR10",
+      "LSUN"
+    ],
+    "key_results": [
+      "Inception score of 9.46 on unconditional CIFAR10",
+      "State-of-the-art FID score of 3.17 on unconditional CIFAR10",
+      "Sample quality similar to ProgressiveGAN on 256x256 LSUN"
+    ],
+    "limitations": []
+  },
+  "reviewed": false
+}

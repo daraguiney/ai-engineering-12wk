@@ -1,0 +1,37 @@
+{
+  "arxiv_id": "2310.06825",
+  "source_text": "Title: Mistral 7B\nAuthors: Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, Lélio Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven Le Scao, Thibaut Lavril, Thomas Wang, Timothée Lacroix, William El Sayed\n\nAbstract: We introduce Mistral 7B v0.1, a 7-billion-parameter language model engineered for superior performance and efficiency. Mistral 7B outperforms Llama 2 13B across all evaluated benchmarks, and Llama 1 34B in reasoning, mathematics, and code generation. Our model leverages grouped-query attention (GQA) for faster inference, coupled with sliding window attention (SWA) to effectively handle sequences of arbitrary length with a reduced inference cost. We also provide a model fine-tuned to follow instructions, Mistral 7B -- Instruct, that surpasses the Llama 2 13B -- Chat model both on human and automated benchmarks. Our models are released under the Apache 2.0 license.",
+  "expected": {
+    "title": "Mistral 7B",
+    "authors": [
+      "Albert Q. Jiang",
+      "Alexandre Sablayrolles",
+      "Arthur Mensch",
+      "Chris Bamford",
+      "Devendra Singh Chaplot",
+      "Diego de las Casas",
+      "Florian Bressand",
+      "Gianna Lengyel",
+      "Guillaume Lample",
+      "Lucile Saulnier",
+      "Lélio Renard Lavaud",
+      "Marie-Anne Lachaux",
+      "Pierre Stock",
+      "Teven Le Scao",
+      "Thibaut Lavril",
+      "Thomas Wang",
+      "Timothée Lacroix",
+      "William El Sayed"
+    ],
+    "problem": "The paper aims to build a language model with superior performance and efficiency at a small size of 7 billion parameters, including faster inference and handling of sequences of arbitrary length at reduced inference cost.",
+    "method": "Mistral 7B v0.1 uses grouped-query attention (GQA) for faster inference together with sliding window attention (SWA) to handle sequences of arbitrary length at reduced inference cost. A fine-tuned instruction-following variant, Mistral 7B -- Instruct, is also provided.",
+    "datasets": [],
+    "key_results": [
+      "Mistral 7B outperforms Llama 2 13B across all evaluated benchmarks",
+      "Mistral 7B outperforms Llama 1 34B in reasoning, mathematics, and code generation",
+      "Mistral 7B -- Instruct surpasses the Llama 2 13B -- Chat model on both human and automated benchmarks"
+    ],
+    "limitations": []
+  },
+  "reviewed": false
+}

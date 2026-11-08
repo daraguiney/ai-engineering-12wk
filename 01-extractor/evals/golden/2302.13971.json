@@ -1,0 +1,32 @@
+{
+  "arxiv_id": "2302.13971",
+  "source_text": "Title: LLaMA: Open and Efficient Foundation Language Models\nAuthors: Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurelien Rodriguez, Armand Joulin, Edouard Grave, Guillaume Lample\n\nAbstract: We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.",
+  "expected": {
+    "title": "LLaMA: Open and Efficient Foundation Language Models",
+    "authors": [
+      "Hugo Touvron",
+      "Thibaut Lavril",
+      "Gautier Izacard",
+      "Xavier Martinet",
+      "Marie-Anne Lachaux",
+      "Timothée Lacroix",
+      "Baptiste Rozière",
+      "Naman Goyal",
+      "Eric Hambro",
+      "Faisal Azhar",
+      "Aurelien Rodriguez",
+      "Armand Joulin",
+      "Edouard Grave",
+      "Guillaume Lample"
+    ],
+    "problem": "The paper addresses whether state-of-the-art foundation language models can be trained using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets.",
+    "method": "The authors introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters, trained on trillions of tokens using only publicly available datasets. All models are released to the research community.",
+    "datasets": [],
+    "key_results": [
+      "LLaMA-13B outperforms GPT-3 (175B) on most benchmarks",
+      "LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B"
+    ],
+    "limitations": []
+  },
+  "reviewed": false
+}

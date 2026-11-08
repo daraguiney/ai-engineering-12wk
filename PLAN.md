@@ -12,7 +12,7 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 - [x] Pick ONE real corpus for the whole plan: **arXiv papers**
 - [ ] API keys: **Anthropic** (chosen), plus Tavily or Exa · budget ~$30–60/month
 - [x] Pick one coding agent (Claude Code / Cursor) and stick with it for the full 12 weeks
-- [ ] Buy: Chip Huyen, [*AI Engineering*](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) (reference throughout)
+- [x] Buy: Chip Huyen, [*AI Engineering*](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) (reference throughout)
 - [ ] Join one community: [Towards AI Discord](https://discord.gg/YPsA3s3aw2) or [MLOps Community](https://mlops.community/)
 - [x] Create a public GitHub remote for this repo
 

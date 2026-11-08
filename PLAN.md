@@ -35,9 +35,9 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 
 ### Week 2 — Eval harness for the extractor
 **Build**
-- [ ] 50-example golden set
-- [ ] Rule-based checks + LLM-as-judge, run via pytest
-- [ ] Error analysis → fixes → record before/after score
+- [x] 50-example golden set
+- [x] Rule-based checks + LLM-as-judge (runner: scripts/run_eval.py)
+- [x] Error analysis → fixes → record before/after score
 
 **Resources**
 - [ ] 5 · [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) + [LLM Evals FAQ](https://hamel.dev/blog/posts/evals-faq/) — Hamel Husain

@@ -27,18 +27,15 @@
     ],
     "problem": "Making language models bigger does not inherently make them better at following a user's intent; large language models can generate outputs that are untruthful, toxic, or not helpful, meaning they are not aligned with their users.",
     "method": "Fine-tune GPT-3 with supervised learning on labeler demonstrations of desired behavior (from labeler-written and OpenAI API prompts), then further fine-tune it using reinforcement learning from human feedback on a dataset of ranked model outputs. The resulting models are called InstructGPT.",
-    "datasets": [
-      "Labeler-written prompts and prompts submitted through the OpenAI API (labeler demonstrations dataset)",
-      "Dataset of rankings of model outputs",
-      "Public NLP datasets"
-    ],
+    "datasets": [],
     "key_results": [
-      "Outputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3, despite having 100x fewer parameters",
-      "InstructGPT models show improvements in truthfulness and reductions in toxic output generation while having minimal performance regressions on public NLP datasets"
+      "1.3B InstructGPT preferred to 175B GPT-3 in human evaluations, with 100x fewer parameters",
+      "Improvements in truthfulness and reductions in toxic output, with minimal regressions on public NLP datasets"
     ],
     "limitations": [
       "InstructGPT still makes simple mistakes"
     ]
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

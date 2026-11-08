@@ -15,10 +15,11 @@
     "method": "The paper introduces generative agents, with an architecture that extends a large language model to store a complete record of the agent's experiences in natural language, synthesize memories over time into higher-level reflections, and retrieve them dynamically to plan behavior. The agents populate an interactive sandbox environment inspired by The Sims, with a small town of twenty five agents.",
     "datasets": [],
     "key_results": [
-      "Starting from a single user-specified notion that one agent wants to throw a Valentine's Day party, agents autonomously spread invitations over the next two days, make new acquaintances, ask each other out on dates to the party, and coordinate to show up together at the right time",
-      "Ablation shows observation, planning, and reflection each contribute critically to the believability of agent behavior"
+      "Starting from one user-specified notion, agents autonomously spread invitations to a Valentine's Day party, make acquaintances and coordinate attendance",
+      "Ablation: observation, planning and reflection each contribute critically to believability"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

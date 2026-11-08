@@ -18,13 +18,14 @@
       "SQuAD v2.0"
     ],
     "key_results": [
-      "New state-of-the-art results on eleven natural language processing tasks",
-      "GLUE score pushed to 80.5% (7.7% point absolute improvement)",
-      "MultiNLI accuracy to 86.7% (4.6% absolute improvement)",
-      "SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement)",
-      "SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement)"
+      "State-of-the-art results on eleven NLP tasks",
+      "GLUE score 80.5% (7.7 point absolute improvement)",
+      "MultiNLI accuracy 86.7% (4.6 absolute improvement)",
+      "SQuAD v1.1 Test F1 93.2 (1.5 point absolute improvement)",
+      "SQuAD v2.0 Test F1 83.1 (5.1 point absolute improvement)"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

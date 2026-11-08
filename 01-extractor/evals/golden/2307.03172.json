@@ -15,8 +15,12 @@
     "problem": "Relatively little is known about how well language models use longer input contexts, even though recent models can take long contexts as input. The paper analyzes how well models identify relevant information in their input contexts.",
     "method": "The authors analyze language model performance on two tasks that require identifying relevant information in the input context, multi-document question answering and key-value retrieval, while varying the position of the relevant information.",
     "datasets": [],
-    "key_results": [],
+    "key_results": [
+      "Performance can degrade significantly when the position of relevant information changes",
+      "Performance is often highest when relevant information is at the beginning or end of the input and degrades in the middle, even for explicitly long-context models"
+    ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

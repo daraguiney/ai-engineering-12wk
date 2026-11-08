@@ -285,16 +285,18 @@
       "William Zhuk",
       "Barret Zoph"
     ],
-    "problem": "The paper reports the development of GPT-4, a large-scale multimodal model that accepts image and text inputs and produces text outputs, aiming for strong performance on professional and academic benchmarks. It also addresses building infrastructure and optimization methods that behave predictably across a wide range of scales.",
+    "problem": "Developing a large-scale multimodal model, together with infrastructure and optimization methods that behave predictably across a wide range of scales.",
     "method": "GPT-4 is a Transformer-based model pre-trained to predict the next token in a document, followed by a post-training alignment process. Infrastructure and optimization methods that behave predictably across scales allow performance to be predicted from models trained with far less compute.",
     "datasets": [],
     "key_results": [
-      "Passes a simulated bar exam with a score around the top 10% of test takers",
-      "Some aspects of GPT-4's performance predicted from models trained with no more than 1/1,000th the compute of GPT-4"
+      "Human-level performance on various professional and academic benchmarks",
+      "Simulated bar exam score around the top 10% of test takers",
+      "Performance predicted from models trained with no more than 1/1,000th the compute of GPT-4"
     ],
     "limitations": [
       "GPT-4 is less capable than humans in many real-world scenarios"
     ]
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

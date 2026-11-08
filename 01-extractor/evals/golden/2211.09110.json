@@ -59,14 +59,12 @@
     "method": "HELM taxonomizes the space of scenarios and metrics, selects a broad subset, and evaluates 30 prominent language models on 42 scenarios using a multi-metric approach (accuracy, calibration, robustness, fairness, bias, toxicity, efficiency) under standardized conditions.",
     "datasets": [],
     "key_results": [
-      "7 metrics measured for each of 16 core scenarios when possible (87.5% of the time)",
-      "7 targeted evaluations based on 26 targeted scenarios",
-      "30 language models evaluated on all 42 scenarios, 21 of which were not previously used in mainstream LM evaluation",
-      "Prior to HELM, models were on average evaluated on just 17.9% of the core HELM scenarios",
-      "HELM improves core scenario coverage to 96.0%",
-      "25 top-level findings surfaced"
+      "Before HELM, models were evaluated on average on just 17.9% of core scenarios; now all 30 models are benchmarked on 96.0%",
+      "30 models densely evaluated on all 42 scenarios, 21 not previously used in mainstream LM evaluation",
+      "25 top-level findings"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

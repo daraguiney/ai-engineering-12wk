@@ -17,10 +17,11 @@
       "HumanEval"
     ],
     "key_results": [
-      "91% pass@1 accuracy on the HumanEval coding benchmark",
-      "Previous state-of-the-art GPT-4 achieves 80% pass@1 on HumanEval"
+      "91% pass@1 on HumanEval, surpassing previous state-of-the-art GPT-4 at 80%",
+      "Significant improvements over a baseline agent across sequential decision-making, coding and language reasoning"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

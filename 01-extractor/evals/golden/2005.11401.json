@@ -19,12 +19,15 @@
     ],
     "problem": "Large pre-trained language models store factual knowledge in their parameters but have limited ability to access and precisely manipulate it, so they lag behind task-specific architectures on knowledge-intensive tasks. Providing provenance for their decisions and updating their world knowledge also remain open problems.",
     "method": "The paper introduces retrieval-augmented generation (RAG) models, a general-purpose fine-tuning recipe that combines a pre-trained seq2seq model as parametric memory with a dense vector index of Wikipedia as non-parametric memory, accessed via a pre-trained neural retriever. Two formulations are compared: one conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token.",
-    "datasets": [],
+    "datasets": [
+      "Wikipedia"
+    ],
     "key_results": [
-      "Set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures",
-      "For language generation tasks, RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline"
+      "State of the art on three open-domain QA tasks",
+      "More specific, diverse and factual generation than a parametric-only seq2seq baseline"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

@@ -24,8 +24,12 @@
       "CIFAR-100",
       "VTAB"
     ],
-    "key_results": [],
+    "key_results": [
+      "Excellent results versus state-of-the-art convolutional networks on ImageNet, CIFAR-100 and VTAB",
+      "Substantially fewer computational resources to train"
+    ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

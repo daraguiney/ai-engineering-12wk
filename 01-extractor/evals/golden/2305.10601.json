@@ -20,10 +20,10 @@
       "Mini Crosswords"
     ],
     "key_results": [
-      "GPT-4 with chain-of-thought prompting solved only 4% of tasks in Game of 24",
-      "ToT achieved a 74% success rate in Game of 24"
+      "Game of 24: ToT reaches a 74% success rate versus 4% for GPT-4 with chain-of-thought prompting"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

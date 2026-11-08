@@ -21,11 +21,12 @@
       "WebShop"
     ],
     "key_results": [
-      "On ALFWorld, ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34%",
-      "On WebShop, ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 10%",
-      "ReAct is prompted with only one or two in-context examples on ALFWorld and WebShop"
+      "ALFWorld: outperforms imitation and reinforcement learning methods by 34% absolute success rate",
+      "WebShop: outperforms imitation and reinforcement learning methods by 10% absolute success rate",
+      "Overcomes hallucination and error propagation of chain-of-thought on HotpotQA and Fever using a Wikipedia API"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

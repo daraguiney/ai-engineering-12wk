@@ -33,16 +33,17 @@
       "Erich Elsen",
       "Laurent Sifre"
     ],
-    "problem": "Auto-regressive language models are improved by conditioning on external information, but the paper asks how to enhance them using retrieval from a very large corpus rather than relying only on model size and training data.",
+    "problem": "How to enhance auto-regressive language models by conditioning on document chunks retrieved from a large corpus.",
     "method": "RETRO (Retrieval-Enhanced Transformer) conditions auto-regressive language models on document chunks retrieved from a large corpus based on local similarity with preceding tokens. It combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism.",
     "datasets": [
       "the Pile"
     ],
     "key_results": [
-      "RETRO with a 2 trillion token database obtains performance comparable to GPT-3 and Jurassic-1 on the Pile",
-      "RETRO uses 25× fewer parameters than GPT-3 and Jurassic-1"
+      "With a 2 trillion token database, comparable performance to GPT-3 and Jurassic-1 on the Pile using 25x fewer parameters",
+      "After fine-tuning, performance transfers to knowledge-intensive tasks such as question answering"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

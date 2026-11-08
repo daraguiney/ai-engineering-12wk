@@ -17,13 +17,14 @@
       "COCO"
     ],
     "key_results": [
-      "3.57% error on the ImageNet test set with an ensemble of residual nets",
+      "3.57% error on the ImageNet test set (ensemble)",
       "1st place on the ILSVRC 2015 classification task",
-      "Residual nets with a depth of up to 152 layers, 8x deeper than VGG nets but with lower complexity",
-      "28% relative improvement on the COCO object detection dataset",
-      "1st places on ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation in ILSVRC & COCO 2015 competitions"
+      "Up to 152 layers, 8x deeper than VGG nets with lower complexity",
+      "28% relative improvement on COCO object detection",
+      "1st places on ImageNet detection, ImageNet localization, COCO detection and COCO segmentation"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

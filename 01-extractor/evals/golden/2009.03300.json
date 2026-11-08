@@ -16,12 +16,13 @@
     "method": "The authors propose a new test covering 57 tasks, including elementary mathematics, US history, computer science, and law, which requires extensive world knowledge and problem solving ability to attain high accuracy.",
     "datasets": [],
     "key_results": [
-      "The very largest GPT-3 model improves over random chance by almost 20 percentage points on average",
+      "Largest GPT-3 model improves over random chance by almost 20 percentage points on average",
       "Most recent models have near random-chance accuracy",
-      "Best models still need substantial improvements to reach expert-level accuracy on every one of the 57 tasks",
-      "Models have near-random accuracy on some socially important subjects such as morality and law"
+      "Best models still need substantial improvements on every one of the 57 tasks",
+      "Near-random accuracy on morality and law"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

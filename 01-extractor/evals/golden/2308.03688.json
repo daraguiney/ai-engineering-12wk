@@ -34,9 +34,11 @@
     ],
     "key_results": [
       "Top commercial LLMs show a strong ability to act as agents in complex environments",
-      "There is a significant disparity in performance between top commercial LLMs and many OSS competitors no larger than 70B"
+      "Significant performance disparity between top commercial LLMs and many OSS competitors no larger than 70B",
+      "Poor long-term reasoning, decision-making and instruction following are the main obstacles for usable LLM agents"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

@@ -40,15 +40,15 @@
     "method": "Train GPT-3, an autoregressive language model with 175 billion parameters, and evaluate it in the few-shot setting without any gradient updates or fine-tuning, with tasks and demonstrations specified purely via text interaction with the model.",
     "datasets": [],
     "key_results": [
-      "GPT-3 has 175 billion parameters, 10x more than any previous non-sparse language model",
-      "GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as tasks like unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic",
-      "Scaling up language models greatly improves task-agnostic, few-shot performance, sometimes reaching competitiveness with prior state-of-the-art fine-tuning approaches",
-      "GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans"
+      "175 billion parameters, 10x more than any previous non-sparse language model",
+      "Strong few-shot performance on translation, question answering, cloze and on-the-fly reasoning tasks such as 3-digit arithmetic",
+      "Human evaluators have difficulty distinguishing GPT-3 news articles from human-written ones"
     ],
     "limitations": [
       "There are some datasets where GPT-3's few-shot learning still struggles",
       "Some datasets where GPT-3 faces methodological issues related to training on large web corpora"
     ]
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

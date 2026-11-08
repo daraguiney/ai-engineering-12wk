@@ -25,10 +25,12 @@
       "Chatbot Arena"
     ],
     "key_results": [
-      "GPT-4 as a judge achieves over 80% agreement with both controlled and crowdsourced human preferences, the same level of agreement as between humans",
-      "MT-bench questions, 3K expert votes, and 30K conversations with human preferences are publicly released"
+      "GPT-4 as a judge achieves over 80% agreement with both controlled and crowdsourced human preferences, the same level as agreement between humans"
     ],
-    "limitations": []
+    "limitations": [
+      "LLM-as-a-judge shows position, verbosity and self-enhancement biases, and limited reasoning ability"
+    ]
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

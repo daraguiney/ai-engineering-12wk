@@ -33,11 +33,12 @@
       "MMLU"
     ],
     "key_results": [
-      "Chinchilla reaches a state-of-the-art average accuracy of 67.5% on the MMLU benchmark",
-      "Chinchilla achieves greater than a 7% improvement over Gopher on MMLU",
-      "Chinchilla (70B) uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and Megatron-Turing NLG (530B) on a large range of downstream evaluation tasks"
+      "Model size and training tokens should be scaled equally under a fixed compute budget",
+      "Chinchilla (70B) outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B) and Megatron-Turing NLG (530B) on downstream tasks",
+      "67.5% average accuracy on MMLU, state of the art and over 7% better than Gopher"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

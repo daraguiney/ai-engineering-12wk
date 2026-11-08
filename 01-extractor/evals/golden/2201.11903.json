@@ -20,10 +20,11 @@
       "GSM8K"
     ],
     "key_results": [
-      "Prompting a 540B-parameter language model with just eight chain of thought exemplars achieves state of the art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned GPT-3 with a verifier.",
-      "Experiments on three large language models show chain of thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks."
+      "540B-parameter model with eight chain of thought exemplars reaches state-of-the-art accuracy on GSM8K, surpassing finetuned GPT-3 with a verifier",
+      "Improves performance on arithmetic, commonsense and symbolic reasoning tasks across three large language models"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

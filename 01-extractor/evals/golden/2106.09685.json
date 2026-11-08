@@ -17,11 +17,12 @@
     "method": "Low-Rank Adaptation (LoRA) freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks.",
     "datasets": [],
     "key_results": [
-      "Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times",
-      "Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the GPU memory requirement by 3 times",
-      "LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, with fewer trainable parameters, a higher training throughput, and no additional inference latency (unlike adapters)"
+      "Reduces trainable parameters by 10,000 times versus GPT-3 175B fine-tuned with Adam",
+      "Reduces GPU memory requirement by 3 times",
+      "On-par or better model quality than fine-tuning on RoBERTa, DeBERTa, GPT-2 and GPT-3, with higher throughput and no added inference latency"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

@@ -16,15 +16,15 @@
     "problem": "Dominant sequence transduction models rely on complex recurrent or convolutional neural networks in an encoder-decoder configuration, which are less parallelizable and require more training time.",
     "method": "The paper proposes the Transformer, a simple network architecture based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
     "datasets": [
-      "WMT 2014 English-to-German translation task",
-      "WMT 2014 English-to-French translation task",
-      "English constituency parsing"
+      "WMT 2014 English-to-German",
+      "WMT 2014 English-to-French"
     ],
     "key_results": [
-      "28.4 BLEU on the WMT 2014 English-to-German translation task, improving over existing best results, including ensembles, by over 2 BLEU",
-      "New single-model state-of-the-art BLEU score of 41.8 on the WMT 2014 English-to-French translation task after training for 3.5 days on eight GPUs"
+      "28.4 BLEU on WMT 2014 English-to-German, over 2 BLEU above the best existing results",
+      "41.8 BLEU on WMT 2014 English-to-French, new single-model state of the art, after 3.5 days on eight GPUs"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

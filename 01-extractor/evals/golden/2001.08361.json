@@ -19,12 +19,13 @@
     "method": "The authors empirically study scaling laws for language model cross-entropy loss. They fit simple equations that govern the dependence on model size, dataset size, and compute, as well as overfitting and training speed.",
     "datasets": [],
     "key_results": [
-      "Loss scales as a power-law with model size, dataset size, and training compute, with some trends spanning more than seven orders of magnitude",
-      "Network width or depth have minimal effects within a wide range",
+      "Loss scales as a power law with model size, dataset size and compute, over more than seven orders of magnitude",
+      "Network width and depth have minimal effects within a wide range",
       "Larger models are significantly more sample-efficient",
-      "Compute-efficient training involves training very large models on a relatively modest amount of data and stopping significantly before convergence"
+      "Compute-efficient training uses very large models on modest data, stopped well before convergence"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

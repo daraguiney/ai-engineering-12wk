@@ -23,11 +23,11 @@
       "ImageNet"
     ],
     "key_results": [
-      "Matches the accuracy of the original ResNet-50 on ImageNet zero-shot without using any of the 1.28 million training examples",
-      "Benchmarked on over 30 different existing computer vision datasets",
-      "Pre-trained on 400 million (image, text) pairs"
+      "Matches original ResNet-50 accuracy on ImageNet zero-shot, without its 1.28 million training examples",
+      "Often competitive with a fully supervised baseline on over 30 computer vision datasets"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

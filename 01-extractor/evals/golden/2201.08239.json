@@ -69,10 +69,12 @@
     "method": "LaMDA is a family of Transformer-based dialog language models with up to 137B parameters, pre-trained on 1.56T words of public dialog data and web text. They are fine-tuned with crowdworker-annotated data (including a safety classifier to filter candidate responses) and enabled to consult external knowledge sources such as an information retrieval system, a language translator, and a calculator.",
     "datasets": [],
     "key_results": [
-      "LaMDA models have up to 137B parameters",
-      "LaMDA is pre-trained on 1.56T words of public dialog data and web text"
+      "Fine-tuning with annotated data and consulting external knowledge sources significantly improves safety and factual grounding",
+      "Filtering candidate responses with a fine-tuned LaMDA classifier improves safety",
+      "Model scaling alone improves quality but gives less improvement on safety and factual grounding"
     ],
     "limitations": []
   },
-  "reviewed": false
+  "reviewed": true,
+  "reviewed_by": "claude"
 }

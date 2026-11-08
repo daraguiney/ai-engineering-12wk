@@ -56,16 +56,16 @@
       "Tom Brown",
       "Jared Kaplan"
     ],
-    "problem": "As AI systems become more capable, human supervision of them becomes harder, so the paper seeks to train a harmless AI assistant without any human labels identifying harmful outputs, using only a list of rules or principles as human oversight.",
+    "problem": "As AI systems become more capable, the authors want to enlist their help to supervise other AIs. They seek to train a harmless AI assistant through self-improvement without any human labels identifying harmful outputs, with the only human oversight being a list of rules or principles.",
     "method": "Constitutional AI has a supervised phase, where an initial model generates self-critiques and revisions that are used to finetune the original model, and an RL phase, where a model evaluates pairs of samples to produce AI preference data for training a preference model, which then serves as the reward signal (RL from AI Feedback, RLAIF). Chain-of-thought style reasoning can be used in both the SL and RL methods.",
     "datasets": [],
     "key_results": [
       "Trains a harmless but non-evasive assistant that explains its objections to harmful queries",
       "Controls AI behavior more precisely with far fewer human labels",
-      "Chain-of-thought style reasoning improves human-judged performance and transparency in both SL and RL"
+      "Chain-of-thought style reasoning can improve human-judged performance and transparency of AI decision making in both the SL and RL methods"
     ],
     "limitations": []
   },
-  "reviewed": true,
-  "reviewed_by": "claude"
+  "reviewed": true
+
 }

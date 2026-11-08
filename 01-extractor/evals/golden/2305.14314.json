@@ -9,21 +9,22 @@
       "Ari Holtzman",
       "Luke Zettlemoyer"
     ],
-    "problem": "Finetuning large language models is memory-intensive, making it infeasible to finetune very large models (e.g. 33B and 65B parameters) on limited hardware. The paper seeks to reduce memory usage without sacrificing 16-bit finetuning task performance.",
-    "method": "QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). It introduces 4-bit NormalFloat (NF4), double quantization of quantization constants, and paged optimizers to manage memory spikes.",
+    "problem": "Model scales such as 33B and 65B parameters are infeasible to run with regular finetuning. The paper seeks to reduce memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance.",
+    "method": "QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). It introduces 4-bit NormalFloat (NF4), double quantization of quantization constants, and paged optimizers to manage memory spikes. The authors use QLoRA to finetune more than 1,000 models, analyzing instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales including 33B and 65B parameters.",
     "datasets": [
       "Vicuna benchmark"
     ],
     "key_results": [
       "Finetunes a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance",
-      "Guanaco reaches 99.3% of ChatGPT's performance on the Vicuna benchmark with 24 hours of finetuning on a single GPU",
+      "Guanaco outperforms all previous openly released models on the Vicuna benchmark",
+      "Guanaco reaches 99.3% of the performance level of ChatGPT on the Vicuna benchmark with 24 hours of finetuning on a single GPU",
+      "QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even with smaller models than the previous SoTA",
       "GPT-4 evaluations are a cheap and reasonable alternative to human evaluation",
-      "Current chatbot benchmarks are not trustworthy for evaluating chatbots"
+      "Current chatbot benchmarks are not trustworthy for accurately evaluating chatbot performance"
     ],
     "limitations": [
       "A lemon-picked analysis shows where Guanaco fails compared to ChatGPT"
     ]
   },
-  "reviewed": true,
-  "reviewed_by": "claude"
+  "reviewed": true
 }

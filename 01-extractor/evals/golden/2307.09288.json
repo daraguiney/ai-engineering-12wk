@@ -73,7 +73,7 @@
       "Sergey Edunov",
       "Thomas Scialom"
     ],
-    "problem": "Developing and releasing pretrained and fine-tuned LLMs, including dialogue-optimized Llama 2-Chat, with fine-tuning and safety improvements the community can build on.",
+    "problem": "The abstract states no explicit problem. Its stated aim is to give the community a detailed description of fine-tuning and safety improvements for dialogue LLMs so it can build on the work and contribute to the responsible development of LLMs.",
     "method": "The authors develop and release Llama 2, a collection of pretrained and fine-tuned LLMs from 7 billion to 70 billion parameters, including Llama 2-Chat, which is fine-tuned and safety-improved for dialogue use cases.",
     "datasets": [],
     "key_results": [
@@ -82,6 +82,6 @@
     ],
     "limitations": []
   },
-  "reviewed": true,
-  "reviewed_by": "claude"
+  "reviewed": true
+  
 }

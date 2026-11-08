@@ -29,13 +29,14 @@
     "method": "Fine-tune GPT-3 with supervised learning on labeler demonstrations of desired behavior (from labeler-written and OpenAI API prompts), then further fine-tune it using reinforcement learning from human feedback on a dataset of ranked model outputs. The resulting models are called InstructGPT.",
     "datasets": [],
     "key_results": [
-      "1.3B InstructGPT preferred to 175B GPT-3 in human evaluations, with 100x fewer parameters",
-      "Improvements in truthfulness and reductions in toxic output, with minimal regressions on public NLP datasets"
+      "1.3B InstructGPT outputs preferred to 175B GPT-3 in human evaluations",
+      "Improvements in truthfulness",
+      "Reductions in toxic output generation",
+      "Minimal performance regressions on public NLP datasets"
     ],
     "limitations": [
       "InstructGPT still makes simple mistakes"
     ]
   },
-  "reviewed": true,
-  "reviewed_by": "claude"
+  "reviewed": true
 }

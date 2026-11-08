@@ -56,15 +56,15 @@
       "Yuta Koreeda"
     ],
     "problem": "Language models are becoming the foundation for almost all major language technologies, but their capabilities, limitations, and risks are not well understood, and prior evaluation covered models and scenarios unevenly.",
-    "method": "HELM taxonomizes the space of scenarios and metrics, selects a broad subset, and evaluates 30 prominent language models on 42 scenarios using a multi-metric approach (accuracy, calibration, robustness, fairness, bias, toxicity, efficiency) under standardized conditions.",
+    "method": "HELM taxonomizes the space of scenarios and metrics and selects a broad subset. It measures 7 metrics (accuracy, calibration, robustness, fairness, bias, toxicity, and efficiency) for each of 16 core scenarios when possible, plus 7 targeted evaluations based on 26 targeted scenarios. It evaluates 30 prominent language models (open, limited-access, and closed) on all 42 scenarios, 21 of which were not previously used in mainstream LM evaluation, under standardized conditions.",
     "datasets": [],
     "key_results": [
-      "Before HELM, models were evaluated on average on just 17.9% of core scenarios; now all 30 models are benchmarked on 96.0%",
-      "30 models densely evaluated on all 42 scenarios, 21 not previously used in mainstream LM evaluation",
-      "25 top-level findings"
+      "Models were previously evaluated on average on just 17.9% of the core scenarios; HELM raises this to 96.0% for all 30 models"
     ],
-    "limitations": []
+    "limitations": [
+      "Some scenarios and metrics are missing or underrepresented, e.g. question answering for neglected English dialects and metrics for trustworthiness"
+    ]
   },
-  "reviewed": true,
-  "reviewed_by": "claude"
+  "reviewed": true
+  
 }

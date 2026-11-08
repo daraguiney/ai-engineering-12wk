@@ -19,18 +19,18 @@
       "Ion Stoica"
     ],
     "problem": "Evaluating LLM-based chat assistants is challenging because of their broad capabilities and because existing benchmarks inadequately measure human preferences.",
-    "method": "The authors use strong LLMs as judges to evaluate chat models on open-ended questions, study the judges' biases (position, verbosity, self-enhancement) and limited reasoning ability, and propose mitigations. They verify agreement with human preferences using two benchmarks: MT-bench, a multi-turn question set, and Chatbot Arena, a crowdsourced battle platform.",
+    "method": "The authors use strong LLMs as judges to evaluate chat models on open-ended questions, study the judges' biases (position, verbosity, self-enhancement) and limited reasoning ability, and propose solutions to mitigate some of them. They verify agreement with human preferences using two benchmarks: MT-bench, a multi-turn question set, and Chatbot Arena, a crowdsourced battle platform.",
     "datasets": [
       "MT-bench",
       "Chatbot Arena"
     ],
     "key_results": [
-      "GPT-4 as a judge achieves over 80% agreement with both controlled and crowdsourced human preferences, the same level as agreement between humans"
+      "Strong LLM judges like GPT-4 can match both controlled and crowdsourced human preferences, achieving over 80% agreement, the same level as agreement between humans",
+      "The MT-bench and Chatbot Arena benchmarks and traditional benchmarks complement each other, shown by evaluating several variants of LLaMA and Vicuna"
     ],
     "limitations": [
       "LLM-as-a-judge shows position, verbosity and self-enhancement biases, and limited reasoning ability"
     ]
   },
-  "reviewed": true,
-  "reviewed_by": "claude"
+  "reviewed": true
 }

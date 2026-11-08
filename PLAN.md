@@ -27,7 +27,7 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 - [x] Prompts versioned in files, not inline strings
 
 **Resources**
-- [ ] 4 · [AI Engineering Foundations webinar](https://youtu.be/ljOwBCdiHmg) — Bouchard
+- [x] 4 · [AI Engineering Foundations webinar](https://youtu.be/ljOwBCdiHmg) — Bouchard
 - [ ] 4 · [Here's how I use LLMs to help me write code](https://simonwillison.net/2025/Mar/11/using-llms-for-code/) — Willison
 - [ ] 5 · [Instructor docs](https://python.useinstructor.com/)
 - [ ] 6 · [Structured data extraction with LLM schemas](https://simonwillison.net/2025/Feb/28/llm-schemas/) — Willison

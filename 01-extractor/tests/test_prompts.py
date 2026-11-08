@@ -17,3 +17,11 @@ def test_v2_prompt_encodes_rubric_rules():
     assert "{document}" in prompt
     assert "explicitly named" in prompt
     assert "Never infer" in prompt
+
+
+def test_v3_prompt_encodes_new_rules():
+    prompt = load_prompt("extract_paper", "v3")
+    assert "{document}" in prompt
+    assert "Models" in prompt and "NOT datasets" in prompt
+    assert "about 40 words" in prompt
+    assert "failure cases" in prompt

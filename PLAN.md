@@ -46,7 +46,7 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 - [ ] Chip Huyen book: evaluation chapters
 
 ### ✅ Stage 1 checkpoint
-- [ ] I can show a metric that moved from X to Y because of a specific prompt/schema change, and explain why
+- [x] I can show a metric that moved from X to Y because of a specific prompt/schema change, and explain why (datasets 0.78 → 0.975, see 01-extractor/README.md)
 
 ---
 

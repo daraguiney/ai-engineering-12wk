@@ -53,3 +53,16 @@ def test_evaluate_counts_extraction_failure_as_zero(tmp_path):
     result = evaluate(load_reviewed(tmp_path), boom)
     assert result["failures"] == [{"arxiv_id": "1111.1111", "error": "bad output"}]
     assert all(v == 0.0 for v in result["mean"].values())
+
+
+def test_evaluate_merges_judge_scores(tmp_path):
+    write(tmp_path, "1111.1111", True)
+    perfect = PaperExtraction(**GOLD)
+
+    result = evaluate(
+        load_reviewed(tmp_path),
+        lambda text: perfect,
+        judge_fn=lambda source, expected, predicted: {"problem": 1.0, "method": 0.5},
+    )
+    assert result["per_record"]["1111.1111"]["method"] == 0.5
+    assert result["mean"]["problem"] == 1.0

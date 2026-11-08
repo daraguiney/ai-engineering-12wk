@@ -26,21 +26,34 @@ def load_reviewed(directory: Path) -> list[dict]:
     return reviewed
 
 
+JudgeFn = Callable[[str, PaperExtraction, PaperExtraction], dict[str, float]]
+JUDGE_FIELDS = ("problem", "method")
+
+
 def evaluate(
-    records: list[dict], extract_fn: Callable[[str], PaperExtraction]
+    records: list[dict],
+    extract_fn: Callable[[str], PaperExtraction],
+    judge_fn: JudgeFn | None = None,
 ) -> dict:
-    """Score extract_fn on each record. Extraction failures score zero and are listed."""
+    """Score extract_fn on each record. Failures score zero and are listed.
+
+    If judge_fn is given, its scores for problem/method are merged in.
+    """
+    fields = SCORE_FIELDS + (JUDGE_FIELDS if judge_fn else ())
     per_record: dict[str, dict[str, float]] = {}
     failures: list[dict[str, str]] = []
     for record in records:
         arxiv_id = record["arxiv_id"]
         try:
+            expected = PaperExtraction(**record["expected"])
             predicted = extract_fn(record["source_text"])
+            scores = score_record(expected, predicted)
+            if judge_fn:
+                scores = {**scores, **judge_fn(record["source_text"], expected, predicted)}
         except EXTRACTION_ERRORS as exc:
             failures = [*failures, {"arxiv_id": arxiv_id, "error": str(exc)}]
-            per_record = {**per_record, arxiv_id: dict.fromkeys(SCORE_FIELDS, 0.0)}
+            per_record = {**per_record, arxiv_id: dict.fromkeys(fields, 0.0)}
             continue
-        scores = score_record(PaperExtraction(**record["expected"]), predicted)
         per_record = {**per_record, arxiv_id: scores}
     return {
         "per_record": per_record,

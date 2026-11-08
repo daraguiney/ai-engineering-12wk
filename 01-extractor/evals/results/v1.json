@@ -35,12 +35,12 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "1706.03762": {
       "title": 1.0,
       "authors": 1.0,
-      "datasets": 0.0,
+      "datasets": 0.8,
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
@@ -151,7 +151,7 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 0.5,
+      "problem": 1.0,
       "method": 1.0
     },
     "2112.09332": {
@@ -166,7 +166,7 @@
     "2201.08239": {
       "title": 1.0,
       "authors": 1.0,
-      "datasets": 0.0,
+      "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
@@ -257,10 +257,10 @@
       "title": 1.0,
       "authors": 1.0,
       "datasets": 0.0,
-      "key_results": 0.8333333333333334,
+      "key_results": 1.0,
       "limitations": 0.0,
-      "problem": 1.0,
-      "method": 1.0
+      "problem": 0.5,
+      "method": 0.5
     },
     "2212.08073": {
       "title": 1.0,
@@ -269,7 +269,7 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2212.10560": {
       "title": 1.0,
@@ -296,7 +296,7 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2303.08774": {
       "title": 1.0,
@@ -304,7 +304,7 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 1.0,
+      "problem": 0.5,
       "method": 1.0
     },
     "2303.11366": {
@@ -341,7 +341,7 @@
       "key_results": 0.8333333333333334,
       "limitations": 0.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2305.16291": {
       "title": 1.0,
@@ -385,7 +385,7 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 1.0,
+      "problem": 0.5,
       "method": 1.0
     },
     "2308.03688": {
@@ -455,11 +455,11 @@
   "mean": {
     "title": 1.0,
     "authors": 0.9998930481283422,
-    "datasets": 0.7444444444444445,
-    "key_results": 0.9733333333333333,
+    "datasets": 0.7804444444444445,
+    "key_results": 0.9766666666666667,
     "limitations": 0.93,
-    "problem": 0.98,
-    "method": 0.99
+    "problem": 0.96,
+    "method": 0.94
   },
   "failures": []
 }

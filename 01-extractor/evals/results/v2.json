@@ -35,7 +35,7 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "1706.03762": {
       "title": 1.0,
@@ -52,7 +52,7 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 0.5,
+      "problem": 1.0,
       "method": 1.0
     },
     "2001.08361": {
@@ -79,7 +79,7 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 1.0,
+      "problem": 0.5,
       "method": 1.0
     },
     "2005.11401": {
@@ -96,7 +96,7 @@
       "authors": 1.0,
       "datasets": 1.0,
       "key_results": 1.0,
-      "limitations": 0.5,
+      "limitations": 0.0,
       "problem": 1.0,
       "method": 1.0
     },
@@ -116,7 +116,7 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 0.5
+      "method": 1.0
     },
     "2010.11929": {
       "title": 1.0,
@@ -241,7 +241,7 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 0.5,
+      "problem": 1.0,
       "method": 1.0
     },
     "2210.11416": {
@@ -258,9 +258,9 @@
       "authors": 1.0,
       "datasets": 1.0,
       "key_results": 1.0,
-      "limitations": 1.0,
+      "limitations": 0.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2212.08073": {
       "title": 1.0,
@@ -268,8 +268,8 @@
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 1.0,
-      "method": 1.0
+      "problem": 0.5,
+      "method": 0.5
     },
     "2212.10560": {
       "title": 1.0,
@@ -296,15 +296,15 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2303.08774": {
       "title": 1.0,
-      "authors": 0.9946524064171123,
+      "authors": 1.0,
       "datasets": 1.0,
       "key_results": 1.0,
       "limitations": 1.0,
-      "problem": 1.0,
+      "problem": 0.5,
       "method": 1.0
     },
     "2303.11366": {
@@ -341,7 +341,7 @@
       "key_results": 0.8333333333333334,
       "limitations": 0.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2305.16291": {
       "title": 1.0,
@@ -413,7 +413,7 @@
       "key_results": 1.0,
       "limitations": 1.0,
       "problem": 1.0,
-      "method": 1.0
+      "method": 0.5
     },
     "2310.06825": {
       "title": 1.0,
@@ -454,12 +454,12 @@
   },
   "mean": {
     "title": 1.0,
-    "authors": 0.9998930481283422,
+    "authors": 1.0,
     "datasets": 0.975,
     "key_results": 0.9766666666666667,
-    "limitations": 0.95,
-    "problem": 0.96,
-    "method": 0.98
+    "limitations": 0.92,
+    "problem": 0.95,
+    "method": 0.93
   },
   "failures": []
 }

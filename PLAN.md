@@ -28,10 +28,10 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 
 **Resources**
 - [x] 4 · [AI Engineering Foundations webinar](https://youtu.be/ljOwBCdiHmg) — Bouchard
-- [ ] 4 · [Here's how I use LLMs to help me write code](https://simonwillison.net/2025/Mar/11/using-llms-for-code/) — Willison
-- [ ] 5 · [Instructor docs](https://python.useinstructor.com/)
-- [ ] 6 · [Structured data extraction with LLM schemas](https://simonwillison.net/2025/Feb/28/llm-schemas/) — Willison
-- [ ] 6 · [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) — Karpathy (1.5×, spread over stage 1)
+- [x] 4 · [Here's how I use LLMs to help me write code](https://simonwillison.net/2025/Mar/11/using-llms-for-code/) — Willison
+- [x] 5 · [Instructor docs](https://python.useinstructor.com/)
+- [x] 6 · [Structured data extraction with LLM schemas](https://simonwillison.net/2025/Feb/28/llm-schemas/) — Willison
+- [x] 6 · [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) — Karpathy (1.5×, spread over stage 1)
 
 ### Week 2 — Eval harness for the extractor
 **Build**

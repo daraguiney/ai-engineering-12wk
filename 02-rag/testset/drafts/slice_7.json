@@ -1,0 +1,73 @@
+[
+ {
+  "id": "s7_q1",
+  "type": "single",
+  "question": "In the Direct Preference Optimization experiments, what optimizer, step size, and warm-up schedule were used by default for training?",
+  "evidence": [
+   {
+    "arxiv_id": "2305.18290",
+    "quote": "we use a β = 0.1, batch size of 64 and the RMSprop optimizer with a learning rate of 1e-6 by default. We linearly warmup the learning rate from 0 to 1e-6 over 150 steps."
+   }
+  ],
+  "notes": "RMSprop, lr 1e-6, linearly warmed up from 0 over 150 steps (also beta 0.1, batch 64)."
+ },
+ {
+  "id": "s7_q2",
+  "type": "single",
+  "question": "Why did the vLLM authors settle on a particular number of tokens per KV cache block as the default, rather than using much larger blocks?",
+  "evidence": [
+   {
+    "arxiv_id": "2309.06180",
+    "quote": "we find that the block size 16 is large enough to efficiently utilize the GPU and small enough to avoid significant internal fragmentation in most workloads."
+   }
+  ],
+  "notes": "Block size 16: big enough to use the GPU efficiently, small enough to avoid significant internal fragmentation."
+ },
+ {
+  "id": "s7_q3",
+  "type": "single",
+  "question": "In the Minecraft lifelong-learning agent Voyager, how much did the count of discovered items fall when the automatic curriculum was swapped for a random one?",
+  "evidence": [
+   {
+    "arxiv_id": "2305.16291",
+    "quote": "The discovered item count drops by 93% if the curriculum is replaced with a random one, because certain tasks may be too challenging if attempted out of order."
+   }
+  ],
+  "notes": "93% drop."
+ },
+ {
+  "id": "s7_q4",
+  "type": "single",
+  "question": "For the 'Lost in the Middle' study of long-context language models, how much can multi-document QA accuracy of GPT-3.5-Turbo fall when the relevant document sits mid-context?",
+  "evidence": [
+   {
+    "arxiv_id": "2307.03172",
+    "quote": "GPT-3.5-Turbo’s multi-document QA performance can drop by more than 20%—in the worst case, performance in 20- and 30-document settings is lower than per-formance without any input documents"
+   }
+  ],
+  "notes": "By more than 20%; in worst case below closed-book performance."
+ },
+ {
+  "id": "s7_q5",
+  "type": "cross",
+  "question": "How well do GPT-4 judgments line up with human annotators, as reported when the papers on LLM-as-a-judge (MT-Bench) and on Direct Preference Optimization justify using GPT-4 as an evaluator?",
+  "evidence": [
+   {
+    "arxiv_id": "2306.05685",
+    "quote": "The agreement under setup S2 (w/o tie) between GPT-4 and humans reaches 85%, which is even higher than the agreement among humans (81%)."
+   },
+   {
+    "arxiv_id": "2305.18290",
+    "quote": "We find GPT-4 judgments correlate strongly with humans, with human agreement with GPT-4 typically similar or higher than inter-human annotator agreement."
+   }
+  ],
+  "notes": "MT-Bench: 85% GPT-4-human vs 81% human-human (non-tie). DPO: GPT-4 agreement with humans similar or higher than inter-annotator agreement."
+ },
+ {
+  "id": "s7_q6",
+  "type": "unanswerable",
+  "question": "What DPO beta value and learning rate were used when fine-tuning Llama-2 70B on the Anthropic HH dialogue dataset?",
+  "evidence": [],
+  "notes": "Not stated in corpus; DPO paper predates Llama-2 experiments."
+ }
+]

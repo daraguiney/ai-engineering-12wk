@@ -1,0 +1,57 @@
+[
+ {
+  "id": "s3_q1",
+  "type": "single",
+  "question": "In the denoising diffusion model that reached an FID of 3.17 on CIFAR10, how are the noise levels of the forward process set across the sampling chain, and what are the endpoint values?",
+  "evidence": [
+   {
+    "arxiv_id": "2006.11239",
+    "quote": "We set the forward process variances to constants increasing linearly from β1 = 10−4 to βT = 0.02. These constants were chosen to be small relative to data scaled to [−1, 1]"
+   }
+  ],
+  "notes": "Fixed constants rising linearly from 1e-4 to 0.02 (T=1000)."
+ },
+ {
+  "id": "s3_q2",
+  "type": "single",
+  "question": "How much does low-rank adaptation of GPT-3 175B shrink the amount of GPU memory needed during training compared with full fine-tuning?",
+  "evidence": [
+   {
+    "arxiv_id": "2106.09685",
+    "quote": "On GPT-3 175B, we reduce the VRAM consumption during training from 1.2TB to 350GB."
+   }
+  ],
+  "notes": "From 1.2TB to 350GB."
+ },
+ {
+  "id": "s3_q3",
+  "type": "single",
+  "question": "For the Retro language model, how large is the document store searched at evaluation time, and how does it differ from the store used during training?",
+  "evidence": [
+   {
+    "arxiv_id": "2112.04426",
+    "quote": "During evaluation the retrieval database consists in the full union of these datasets, with the exception of books for which we use a sub-sample of 4%. The evaluation retrieval database thus contains 1.75T tokens."
+   }
+  ],
+  "notes": "1.75T tokens: full union of datasets with books subsampled to 4%, versus 600B tokens at training."
+ },
+ {
+  "id": "s3_q4",
+  "type": "single",
+  "question": "On the 57-subject multitask test introduced by Hendrycks et al., what score do non-specialist crowd workers get?",
+  "evidence": [
+   {
+    "arxiv_id": "2009.03300",
+    "quote": "Unspecialized humans from Amazon Mechanical Turk obtain 34.5% accuracy on this test."
+   }
+  ],
+  "notes": "34.5%."
+ },
+ {
+  "id": "s3_q5",
+  "type": "unanswerable",
+  "question": "What FID score does the DDPM model obtain when trained on 256x256 ImageNet?",
+  "evidence": [],
+  "notes": "Not stated; DDPM reports CIFAR10, CelebA-HQ and LSUN only."
+ }
+]

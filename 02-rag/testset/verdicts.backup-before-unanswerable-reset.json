@@ -1,0 +1,162 @@
+{
+ "q01": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q02": {
+  "verdict": "fix",
+  "note": "it says 103 layer network but expected answer was 103 layer network"
+ },
+ "q03": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q04": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q05": {
+  "verdict": "fix",
+  "note": "Good default settings for the tested machine learning problems are α = 0.001, β1 = 0.9, β2 = 0.999 and ϵ = 10−8. expected answer was Transformer: beta2=0.98, eps=1e-9; Adam defaults: beta2=0.999, eps=1e-8."
+ },
+ "q06": {
+  "verdict": "drop",
+  "note": ""
+ },
+ "q07": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q08": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q09": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q10": {
+  "verdict": "fix",
+  "note": "Equation (1.1) and (1.2) together suggest that as we increase the model size, we should increase the dataset size sublinearly according to D ∝N αN αD ∼N 0.74. seems a little more than Data should grow sublinearly, D ~ N^0.74."
+ },
+ "q11": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q12": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q13": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q14": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q15": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q16": {
+  "verdict": "drop",
+  "note": ""
+ },
+ "q17": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q18": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q19": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q20": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q21": {
+  "verdict": "drop",
+  "note": ""
+ },
+ "q22": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q23": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q24": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q25": {
+  "verdict": "fix",
+  "note": "seems to differ from expected"
+ },
+ "q26": {
+  "verdict": "drop",
+  "note": ""
+ },
+ "q27": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q28": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q29": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q30": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q31": {
+  "verdict": "drop",
+  "note": ""
+ },
+ "q32": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q33": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q34": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q35": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q36": {
+  "verdict": "drop",
+  "note": ""
+ },
+ "q37": {
+  "verdict": "fix",
+  "note": "seems different than expected"
+ },
+ "q38": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q39": {
+  "verdict": "ok",
+  "note": ""
+ },
+ "q40": {
+  "verdict": "ok",
+  "note": ""
+ }
+}

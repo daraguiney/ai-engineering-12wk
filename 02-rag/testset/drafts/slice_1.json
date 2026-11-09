@@ -1,0 +1,73 @@
+[
+ {
+  "id": "s1_q1",
+  "type": "single",
+  "question": "In the attention-based neural machine translation paper (RNNsearch, Bahdanau et al.), how many sentences contribute to each gradient update direction, and roughly how long was each model trained?",
+  "evidence": [
+   {
+    "arxiv_id": "1409.0473",
+    "quote": "Each SGD update direction is computed using a minibatch of 80 sentences. We trained each model for approximately 5 days."
+   }
+  ],
+  "notes": "80 sentences per update; about 5 days of training per model."
+ },
+ {
+  "id": "s1_q2",
+  "type": "single",
+  "question": "In the deep residual learning paper, what test error on CIFAR-10 did the extremely deep network with over a thousand layers obtain?",
+  "evidence": [
+   {
+    "arxiv_id": "1512.03385",
+    "quote": "Our method shows no optimization difﬁculty, and this 103-layer network is able to achieve training error <0.1% (Fig. 6, right). Its test error is still fairly good (7.93%, Table 6)."
+   }
+  ],
+  "notes": "7.93% test error (the 1202-layer network)."
+ },
+ {
+  "id": "s1_q3",
+  "type": "single",
+  "question": "In the original word2vec paper (Efficient Estimation of Word Representations in Vector Space), what initial step size was used for SGD in the Table 2 and 4 experiments, and how was it annealed over training?",
+  "evidence": [
+   {
+    "arxiv_id": "1301.3781",
+    "quote": "We chose starting learning rate 0.025 and decreased it linearly, so that it approaches zero at the end of the last training epoch."
+   }
+  ],
+  "notes": "Start at 0.025, decreased linearly to approach zero by the end of the last epoch (three epochs)."
+ },
+ {
+  "id": "s1_q4",
+  "type": "single",
+  "question": "When training the Transformer from 'Attention Is All You Need', what value was used for softening the one-hot training targets, and how did this affect perplexity versus accuracy and BLEU?",
+  "evidence": [
+   {
+    "arxiv_id": "1706.03762",
+    "quote": "During training, we employed label smoothing of value ϵls = 0.1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score."
+   }
+  ],
+  "notes": "0.1; it hurts perplexity (model is more unsure) but improves accuracy and BLEU."
+ },
+ {
+  "id": "s1_q5",
+  "type": "cross",
+  "question": "How do the second-moment decay rate and the numerical-stability constant used to train the Transformer differ from the values the original Adam paper recommends as good defaults?",
+  "evidence": [
+   {
+    "arxiv_id": "1706.03762",
+    "quote": "We used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ϵ = 10−9."
+   },
+   {
+    "arxiv_id": "1412.6980",
+    "quote": "Good default settings for the tested machine learning problems are α = 0.001, β1 = 0.9, β2 = 0.999 and ϵ = 10−8."
+   }
+  ],
+  "notes": "Transformer: beta2=0.98, eps=1e-9; Adam defaults: beta2=0.999, eps=1e-8."
+ },
+ {
+  "id": "s1_q6",
+  "type": "unanswerable",
+  "question": "How many kilowatt-hours of electricity were consumed in training the base Transformer model on WMT 2014 English-to-German?",
+  "evidence": [],
+  "notes": "Not stated in any paper; Transformer paper reports only training time and FLOPs-based cost estimates, not energy."
+ }
+]

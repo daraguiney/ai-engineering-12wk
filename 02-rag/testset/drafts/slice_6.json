@@ -1,0 +1,57 @@
+[
+ {
+  "id": "s6_q1",
+  "type": "single",
+  "question": "In LLaMA pretraining, to what fraction of its peak value does the learning rate decay by the end of the cosine schedule, and what weight decay is applied?",
+  "evidence": [
+   {
+    "arxiv_id": "2302.13971",
+    "quote": "We use a cosine learning rate schedule, such that the ﬁnal learning rate is equal to 10% of the maxi- mal learning rate. We use a weight decay of 0.1 and gradient clipping of 1.0."
+   }
+  ],
+  "notes": "Final LR is 10% of max; weight decay 0.1."
+ },
+ {
+  "id": "s6_q2",
+  "type": "single",
+  "question": "In the Generative Agents architecture, what numeric cutoff on accumulated event significance causes an agent to produce higher-level abstract thoughts, and about how often does this happen per simulated day?",
+  "evidence": [
+   {
+    "arxiv_id": "2304.03442",
+    "quote": "we generate reflections when the sum of the importance scores for the latest events perceived by the agents exceeds a threshold (150 in our implementation). In practice, our agents reflected roughly two or three times a day."
+   }
+  ],
+  "notes": "Threshold 150; roughly two or three times a day."
+ },
+ {
+  "id": "s6_q3",
+  "type": "single",
+  "question": "For the Game of 24 task, how much does Tree of Thoughts improve when its search keeps five candidate states per step instead of one?",
+  "evidence": [
+   {
+    "arxiv_id": "2305.10601",
+    "quote": "ToT with a breadth of b = 1 already achieves a success rate of 45%, while b = 5 achieves 74%."
+   }
+  ],
+  "notes": "Rises from 45% (b=1) to 74% (b=5)."
+ },
+ {
+  "id": "s6_q4",
+  "type": "single",
+  "question": "In QLoRA, what block sizes are used when quantizing the weights and when quantizing the first-level scaling factors, and why is the latter larger?",
+  "evidence": [
+   {
+    "arxiv_id": "2305.14314",
+    "quote": "We use a blocksize of 64 for W for higher quantization precision and a blocksize of 256 for c2 to conserve memory."
+   }
+  ],
+  "notes": "64 for weights (precision), 256 for second-level constants (save memory)."
+ },
+ {
+  "id": "s6_q5",
+  "type": "unanswerable",
+  "question": "How much GPU memory in gigabytes does Tree of Thoughts require when solving Mini Crosswords with GPT-4?",
+  "evidence": [],
+  "notes": "Not stated; ToT uses API calls to GPT-4 and reports token cost, not GPU memory."
+ }
+]

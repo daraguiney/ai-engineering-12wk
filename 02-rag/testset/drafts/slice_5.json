@@ -1,0 +1,73 @@
+[
+  {
+    "id": "s5_q1",
+    "type": "single",
+    "question": "In FlashAttention's gradient computation, why does re-deriving the attention matrix instead of storing it not make training slower, even though it adds arithmetic?",
+    "evidence": [
+      {
+        "arxiv_id": "2205.14135",
+        "quote": "In contrast, even with more FLOPs, our recomputation speeds up the backward pass due to reduced HBM accesses"
+      }
+    ],
+    "notes": "Because it reduces high-bandwidth-memory accesses, which outweighs the extra FLOPs."
+  },
+  {
+    "id": "s5_q2",
+    "type": "single",
+    "question": "What optimization settings (epochs, learning rate relative to pretraining, and batch size) were used to fine-tune the supervised stage of the Constitutional AI pipeline?",
+    "evidence": [
+      {
+        "arxiv_id": "2212.08073",
+        "quote": "We trained for one epoch, using a constant learning rate of 0.5 relative to the pre-training learning rate, and batch size 1024 sequences."
+      }
+    ],
+    "notes": "One epoch, constant LR of 0.5x the pre-training LR, batch size 1024 sequences."
+  },
+  {
+    "id": "s5_q3",
+    "type": "single",
+    "question": "At roughly what model size did Toolformer's gains from calling external APIs begin to show up in the GPT-2 family experiments?",
+    "evidence": [
+      {
+        "arxiv_id": "2302.04761",
+        "quote": "the ability to leverage the provided tools only emerges at around 775M parameters: smaller models achieve similar performance both with and without tools."
+      }
+    ],
+    "notes": "Around 775M parameters; smaller models perform similarly with or without tools."
+  },
+  {
+    "id": "s5_q4",
+    "type": "single",
+    "question": "In the manual error analysis of HotpotQA trajectories, how often did chain-of-thought prompting produce a wrong-but-counted-correct answer due to fabricated facts, compared with the reasoning-plus-acting approach?",
+    "evidence": [
+      {
+        "arxiv_id": "2210.03629",
+        "quote": "Hallucination is a serious problem for CoT, resulting in much higher false positive rate than ReAct (14% vs. 6%) in success mode"
+      }
+    ],
+    "notes": "CoT 14% vs ReAct 6% false positive rate in success mode."
+  },
+  {
+    "id": "s5_q5",
+    "type": "cross",
+    "question": "Self-Instruct's instruction set generated from GPT-3 and Constitutional AI's red-team prompt set both rely on model-written prompts. Which contains more model-generated prompts, and what are the two counts?",
+    "evidence": [
+      {
+        "arxiv_id": "2212.10560",
+        "quote": "We generate a total of over 52K instruc- tions and more than 82K instances corresponding to these instructions after filtering."
+      },
+      {
+        "arxiv_id": "2212.08073",
+        "quote": "generated a further 140,335 prompts by few-shot prompting a pre- trained model, giving a total of 182,831."
+      }
+    ],
+    "notes": "Constitutional AI: 140,335 model-generated red-team prompts vs about 52K (52,445) Self-Instruct instructions; CAI has more."
+  },
+  {
+    "id": "s5_q6",
+    "type": "unanswerable",
+    "question": "What speedup does FlashAttention achieve when run on Google TPU hardware?",
+    "evidence": [],
+    "notes": "Not stated in any paper; FlashAttention is evaluated on NVIDIA GPUs."
+  }
+]

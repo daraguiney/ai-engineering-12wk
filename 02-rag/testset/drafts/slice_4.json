@@ -1,0 +1,73 @@
+[
+ {
+  "id": "s4_q1",
+  "type": "single",
+  "question": "In the WebGPT browser-assisted question-answering work, how does the approach of drawing several candidate answers and keeping the reward model's top pick differ from reinforcement learning in terms of what it costs?",
+  "evidence": [
+   {
+    "arxiv_id": "2112.09332",
+    "quote": "We used this as an alternative method of optimizing against the reward model, which requires no additional training, but instead uses more inference-time compute."
+   }
+  ],
+  "notes": "Rejection sampling (best-of-n) needs no additional training but uses more inference-time compute."
+ },
+ {
+  "id": "s4_q2",
+  "type": "single",
+  "question": "What accuracy did the 'Let's think step by step' trigger-phrase method reach on MultiArith with large-scale InstructGPT, compared with the plain zero-shot baseline?",
+  "evidence": [
+   {
+    "arxiv_id": "2205.11916",
+    "quote": "Zero-shot-CoT achieves enormous score gains compared to the zero-shot baseline, e.g. from 17.7% to 78.7% on MultiArith and from 10.4% to 40.7% on GSM8K"
+   }
+  ],
+  "notes": "17.7% (zero-shot) to 78.7% (Zero-shot-CoT) on MultiArith."
+ },
+ {
+  "id": "s4_q3",
+  "type": "single",
+  "question": "Which optimizer did the Chinchilla compute-optimal language model use instead of the one used for Gopher, and why did the authors prefer it?",
+  "evidence": [
+   {
+    "arxiv_id": "2203.15556",
+    "quote": "We use AdamW (Loshchilov and Hutter, 2019) for Chinchilla rather than Adam (Kingma and Ba, 2014) as this improves the language modelling loss and the downstream task performance"
+   }
+  ],
+  "notes": "AdamW instead of Adam; it improves LM loss and downstream performance after finetuning."
+ },
+ {
+  "id": "s4_q4",
+  "type": "single",
+  "question": "In the chain-of-thought prompting paper's experiments, how many hand-written demonstrations were used for most benchmarks, and how many for the multiple-choice AQuA dataset?",
+  "evidence": [
+   {
+    "arxiv_id": "2201.11903",
+    "quote": "we used this single set of eight chain of thought exemplars for all benchmarks except AQuA, which is multiple choice instead of free response. For AQuA, we used four exemplars"
+   }
+  ],
+  "notes": "Eight exemplars for most benchmarks; four for AQuA."
+ },
+ {
+  "id": "s4_q5",
+  "type": "cross",
+  "question": "How does the way answers are decoded from the language model in the original chain-of-thought prompting evaluation differ from the decoding setup in the self-consistency method for LaMDA-137B?",
+  "evidence": [
+   {
+    "arxiv_id": "2201.11903",
+    "quote": "We sample from the models via greedy decoding (though follow-up work shows chain-of-thought prompting can be improved by taking the majority ﬁnal answer over many sampled generations"
+   },
+   {
+    "arxiv_id": "2203.11171",
+    "quote": "for UL2-20B and LaMDA-137B we applied temperature sampling with T = 0.5 and truncated at the top-k (k = 40) tokens with the highest probability"
+   }
+  ],
+  "notes": "CoT paper: greedy decoding; self-consistency: temperature sampling T=0.5, top-k 40, then aggregate."
+ },
+ {
+  "id": "s4_q6",
+  "type": "unanswerable",
+  "question": "What was the total dollar cost of the OpenAI API calls used to run the Zero-shot-CoT experiments on GSM8K?",
+  "evidence": [],
+  "notes": "Not stated in any paper; expected answer is that the corpus does not say."
+ }
+]

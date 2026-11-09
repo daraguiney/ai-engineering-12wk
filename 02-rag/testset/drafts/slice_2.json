@@ -1,0 +1,73 @@
+[
+  {
+    "id": "s2_q1",
+    "type": "single",
+    "question": "During the original BERT pre-training run, how many tokens go through the model in each update, and how many updates are performed in total?",
+    "evidence": [
+      {
+        "arxiv_id": "1810.04805",
+        "quote": "We train with batch size of 256 sequences (256 sequences * 512 tokens = 128,000 tokens/batch) for 1,000,000 steps, which is approximately 40 epochs over the 3.3 billion word corpus."
+      }
+    ],
+    "notes": "128,000 tokens per batch (256 sequences x 512 tokens); 1,000,000 steps."
+  },
+  {
+    "id": "s2_q2",
+    "type": "single",
+    "question": "In the main Dense Passage Retriever configuration, what mini-batch size is used and what extra hard negative is added for every question?",
+    "evidence": [
+      {
+        "arxiv_id": "2004.04906",
+        "quote": "trained using the in-batch negative setting (Section 3.2) with a batch size of 128 and one additional BM25 negative passage per question."
+      }
+    ],
+    "notes": "Batch size 128, plus one BM25-retrieved negative passage per question."
+  },
+  {
+    "id": "s2_q3",
+    "type": "single",
+    "question": "What hardware, number of optimisation steps, mini-batch size and learning rate did the REALM authors use for its pre-training phase?",
+    "evidence": [
+      {
+        "arxiv_id": "2002.08909",
+        "quote": "We pre-train for 200k steps on 64 Google Cloud TPUs, with a batch size of 512 and a learning rate of 3e-5, using BERT’s default optimizer."
+      }
+    ],
+    "notes": "64 Google Cloud TPUs, 200k steps, batch size 512, learning rate 3e-5."
+  },
+  {
+    "id": "s2_q4",
+    "type": "single",
+    "question": "Per the neural language model scaling-law study, if the parameter count is increased, roughly how should the amount of training text grow to keep overfitting in check, and with what exponent?",
+    "evidence": [
+      {
+        "arxiv_id": "2001.08361",
+        "quote": "Equation (1.1) and (1.2) together suggest that as we increase the model size, we should increase the dataset size sublinearly according to D ∝N αN αD ∼N 0.74."
+      }
+    ],
+    "notes": "Data should grow sublinearly, D ~ N^0.74."
+  },
+  {
+    "id": "s2_q5",
+    "type": "cross",
+    "question": "When training the retrieval-augmented components, how does REALM's handling of the document embeddings and search index compare with that of the Retrieval-Augmented Generation (RAG) model of Lewis et al.?",
+    "evidence": [
+      {
+        "arxiv_id": "2002.08909",
+        "quote": "by asynchronously re-embedding and re-indexing all documents every several hundred training steps."
+      },
+      {
+        "arxiv_id": "2005.11401",
+        "quote": "Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training"
+      }
+    ],
+    "notes": "REALM periodically refreshes (re-embeds/re-indexes) the index during pre-training; RAG keeps document encoder and index fixed because updating is costly."
+  },
+  {
+    "id": "s2_q6",
+    "type": "unanswerable",
+    "question": "How many GPU-hours did it take to fine-tune the RAG model on Natural Questions?",
+    "evidence": [],
+    "notes": "Not stated in any corpus paper; expected: unanswerable."
+  }
+]

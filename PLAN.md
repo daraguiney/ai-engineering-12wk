@@ -54,8 +54,8 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 
 ### Week 3 — Baseline cited Q&A → [`02-rag/`](02-rag/)
 **Build**
-- [ ] Retrieval eval set (question → expected chunks) written BEFORE tuning
-- [ ] Baseline Q&A with citations on LanceDB or Qdrant
+- [x] Retrieval eval set (question → expected chunks) written BEFORE tuning
+- [x] Baseline Q&A with citations on LanceDB or Qdrant
 
 **Resources**
 - [ ] 4 · [Why RAG Is Not Training Your AI](https://www.louisbouchard.ai/why-rag-is-not-training-your-ai/)

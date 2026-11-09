@@ -8,3 +8,4 @@ __pycache__/
 *.lance/
 qdrant_storage/
 .coverage
+private/

@@ -1,8 +1,11 @@
 """Score retrieval against the labelled test set: a hit means a retrieved chunk contains the quote."""
+from collections.abc import Callable
+
 from rag.index import Embedder, search
 from rag.testset import Question, quote_in_text
 
 KS = (1, 3, 5, 10)
+Retrieve = Callable[[str, int], list[dict]]
 
 
 def _first_rank(hits: list[dict], arxiv_id: str, quote: str | None) -> int | None:
@@ -13,9 +16,12 @@ def _first_rank(hits: list[dict], arxiv_id: str, quote: str | None) -> int | Non
     return None
 
 
-def score_question(question: Question, table, embedder: Embedder, max_k: int = 10) -> dict:
+def score_question(
+    question: Question, table, embedder: Embedder, max_k: int = 10, retrieve: Retrieve | None = None
+) -> dict:
     """Rank of the evidence in the top `max_k`. For two-paper questions, the worse of the two."""
-    hits = search(table, embedder, question.question, k=max_k)
+    run = retrieve or (lambda query, k: search(table, embedder, query, k=k))
+    hits = run(question.question, max_k)
     ev_ranks = [_first_rank(hits, e.arxiv_id, e.quote) for e in question.evidence]
     paper_ranks = [_first_rank(hits, e.arxiv_id, None) for e in question.evidence]
 

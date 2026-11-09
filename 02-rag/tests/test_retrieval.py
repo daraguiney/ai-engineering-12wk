@@ -86,3 +86,9 @@ def test_recall_at_k_ignores_unanswerable_and_counts_misses():
     ]
     assert recall_at_k(results, 1) == pytest.approx(1 / 3)
     assert recall_at_k(results, 5) == pytest.approx(2 / 3)
+
+
+def test_score_question_accepts_a_custom_retriever(table):
+    q = _q("c", "single", [Evidence(arxiv_id="1111.1111", quote="Cats are small mammals.")])
+    fake = lambda query, k: [{"arxiv_id": "1111.1111", "chunk_index": 0, "text": "Cats are small mammals."}]
+    assert score_question(q, table, FakeEmbedder(), retrieve=fake)["rank"] == 1

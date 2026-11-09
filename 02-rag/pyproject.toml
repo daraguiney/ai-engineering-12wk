@@ -10,6 +10,7 @@ dependencies = [
     "lancedb>=0.41.0",
     "pydantic>=2.8",
     "pymupdf>=2.1",
+    "rank-bm25>=0.2.2",
 ]
 
 [dependency-groups]

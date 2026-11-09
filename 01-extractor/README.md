@@ -41,6 +41,24 @@ v3 added: models are not datasets, a named-corpus clause, a ~40-word `method` ru
 - v3 rules were written after studying this same gold set, so any gain here would overstate generalisation.
 - Next: keep only the method rule, and measure on 10–15 fresh papers not used so far (held-out), instead of tuning more on these 50.
 
+## Hillclimb attempt (2026-11-08): stopped, no measurable prompt gain
+Tried `/claude-api hillclimb` on v2 with target = mean of `limitations` + `method`, all 50 records
+and 3 reps (no train/test split, so every number is directional). Runner: `scripts/run_hillclimb_round.py`
+(records transcripts, token usage and per-rep grades under `.claude/hillclimb/`).
+- **Baseline v2: target 0.942** (limitations 0.920, method 0.963); cost $2.96 per pass.
+- **Noise:** about ±0.044 (95%) on the 50-record mean, versus 0.058 of total headroom.
+- **Why I stopped before round 1:** an analyzer read the failing transcripts. Only 9 of 50 records lose
+  any target score. The largest prompt-fixable behaviour (omitting a limitation the abstract states
+  indirectly) is worth at most 0.013–0.023, inside the noise, and a looser limitations rule would
+  risk false positives on empty-gold records (2009.03300).
+- **The rest is not a prompt problem:** exact-string F1 penalises wording differences on `limitations`
+  (2005.14165, 2211.09110) and some gold choices differ from the model's (2305.14314 method/key_results,
+  2306.05685 limitations).
+- **Also seen:** `method` moved 0.93 → 0.963 with no prompt change, so the judge swings about 3 points
+  between runs.
+- **Next if revisited:** loosen the limitations matcher and re-score v1–v3 from stored outputs, review the
+  two contested gold records, and add fresh papers labelled independently of v2.
+
 ## Caveats — read before trusting these numbers
 1. **Gold labels: 14 of 50 reviewed by the owner** (3 first, then 11 in a spot-check of the riskiest records); the other 36 were reviewed by Claude (see `reviewed_by`). The owner changed fields in all 11 spot-checked records, so Claude's labels were not reliable on the hard cases.
 2. **Anchoring:** 40 of the 50 drafts were produced by the v2 prompt, then edited. This favours v2. On just the 10 v1-drafted records (the fairer comparison) datasets goes 0.70 → 0.90: smaller, but the same direction.

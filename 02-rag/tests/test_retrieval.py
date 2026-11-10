@@ -92,3 +92,13 @@ def test_score_question_accepts_a_custom_retriever(table):
     q = _q("c", "single", [Evidence(arxiv_id="1111.1111", quote="Cats are small mammals.")])
     fake = lambda query, k: [{"arxiv_id": "1111.1111", "chunk_index": 0, "text": "Cats are small mammals."}]
     assert score_question(q, table, FakeEmbedder(), retrieve=fake)["rank"] == 1
+
+
+def test_build_index_embeds_context_but_keeps_original_text(tmp_path):
+    contexts = {("1111.1111", 0): "A note about cats."}
+    t = build_index({"1111.1111": TEXTS["1111.1111"]}, FakeEmbedder(), tmp_path / "db", size=300, overlap=100, contexts=contexts)
+    row = next(r for r in t.to_arrow().to_pylist() if r["chunk_index"] == 0)
+    assert row["text"].startswith("Cats are small")
+    assert row["contextual_text"].startswith("A note about cats.\n\nCats are small")
+    other = next(r for r in t.to_arrow().to_pylist() if r["chunk_index"] == 1)
+    assert other["contextual_text"] == other["text"]  # no note recorded -> unchanged

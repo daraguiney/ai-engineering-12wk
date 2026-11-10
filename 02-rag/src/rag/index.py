@@ -5,6 +5,7 @@ from typing import Protocol
 import lancedb
 
 from rag.chunking import DEFAULT_OVERLAP, DEFAULT_SIZE, chunk_text
+from rag.contextualize import contextual_text
 
 TABLE = "chunks"
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
@@ -38,15 +39,22 @@ def build_index(
     db_path: Path,
     size: int = DEFAULT_SIZE,
     overlap: int = DEFAULT_OVERLAP,
+    contexts: dict[tuple[str, int], str] | None = None,
 ):
     """Chunk every paper, embed the chunks, and (re)create the table. Returns the table."""
+    notes = contexts or {}
     rows = []
     for arxiv_id in sorted(texts):
         chunks = chunk_text(texts[arxiv_id], size=size, overlap=overlap)
-        vectors = embedder.embed_passages([c.text for c in chunks])
+        embed_texts = [
+            contextual_text(notes[(arxiv_id, c.index)], c.text) if (arxiv_id, c.index) in notes else c.text
+            for c in chunks
+        ]
+        vectors = embedder.embed_passages(embed_texts)
         rows += [
-            {"arxiv_id": arxiv_id, "chunk_index": c.index, "start": c.start, "text": c.text, "vector": v}
-            for c, v in zip(chunks, vectors, strict=True)
+            {"arxiv_id": arxiv_id, "chunk_index": c.index, "start": c.start, "text": c.text,
+             "contextual_text": et, "vector": v}
+            for c, et, v in zip(chunks, embed_texts, vectors, strict=True)
         ]
     if not rows:
         raise ValueError("no text to index")

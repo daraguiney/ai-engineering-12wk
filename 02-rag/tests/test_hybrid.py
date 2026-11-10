@@ -59,3 +59,9 @@ def test_hybrid_search_combines_dense_and_bm25():
     bm25 = lambda q, k: [_hit("a", 0), _hit("b", 0)]
     fused = hybrid_search("q", dense=dense, sparse=bm25, k=3, pool=10)
     assert (fused[0]["arxiv_id"], fused[0]["chunk_index"]) == ("b", 0)
+
+
+def test_bm25_can_index_a_different_text_field():
+    rows = [{**r, "contextual_text": r["text"] + (" quantum" if r["chunk_index"] == 1 else "")} for r in ROWS]
+    hits = bm25_search(Bm25Index(rows, text_key="contextual_text"), "quantum", k=1)
+    assert (hits[0]["arxiv_id"], hits[0]["chunk_index"]) == ("a", 1)

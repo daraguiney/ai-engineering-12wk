@@ -1,0 +1,2604 @@
+{
+ "variants": {
+  "ctx_dense": {
+   "recall": {
+    "recall@1": 0.235,
+    "recall@3": 0.529,
+    "recall@5": 0.559,
+    "recall@10": 0.706
+   },
+   "paper_recall": {
+    "paper_recall@1": 0.824,
+    "paper_recall@3": 0.853,
+    "paper_recall@5": 0.853,
+    "paper_recall@10": 0.882
+   },
+   "median_latency_s": 0.012,
+   "per_question": [
+    {
+     "id": "q01",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473"
+     ]
+    },
+    {
+     "id": "q02",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385"
+     ]
+    },
+    {
+     "id": "q03",
+     "type": "single",
+     "rank": 8,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      8
+     ],
+     "top_papers": [
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781"
+     ]
+    },
+    {
+     "id": "q04",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "2205.14135",
+      "2106.09685",
+      "1706.03762"
+     ]
+    },
+    {
+     "id": "q05",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "2001.08361",
+      "1412.6980",
+      "1412.6980",
+      "1412.6980",
+      "1412.6980"
+     ]
+    },
+    {
+     "id": "q06",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "2302.13971"
+     ]
+    },
+    {
+     "id": "q07",
+     "type": "single",
+     "rank": 4,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      4
+     ],
+     "top_papers": [
+      "1810.04805",
+      "1810.04805",
+      "1810.04805",
+      "1810.04805",
+      "2203.15556"
+     ]
+    },
+    {
+     "id": "q08",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906"
+     ]
+    },
+    {
+     "id": "q09",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2002.08909",
+      "2002.08909",
+      "2002.08909",
+      "2002.08909",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q10",
+     "type": "single",
+     "rank": 9,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      9
+     ],
+     "top_papers": [
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361"
+     ]
+    },
+    {
+     "id": "q11",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2310.11511",
+      "2312.10997"
+     ]
+    },
+    {
+     "id": "q12",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239"
+     ]
+    },
+    {
+     "id": "q13",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685"
+     ]
+    },
+    {
+     "id": "q14",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2112.04426",
+      "2112.04426",
+      "2112.04426",
+      "2112.04426",
+      "2112.04426"
+     ]
+    },
+    {
+     "id": "q15",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300"
+     ]
+    },
+    {
+     "id": "q16",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2010.11929",
+      "1512.03385",
+      "1512.03385",
+      "2010.11929",
+      "2010.11929"
+     ]
+    },
+    {
+     "id": "q17",
+     "type": "single",
+     "rank": 6,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      6
+     ],
+     "top_papers": [
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332"
+     ]
+    },
+    {
+     "id": "q18",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q19",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556"
+     ]
+    },
+    {
+     "id": "q20",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171"
+     ]
+    },
+    {
+     "id": "q21",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2310.03714",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q22",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q23",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2302.04761",
+      "2302.04761",
+      "2302.04761",
+      "2302.04761",
+      "2302.04761"
+     ]
+    },
+    {
+     "id": "q24",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 2,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2201.11903",
+      "2210.03629",
+      "2201.11903",
+      "2201.11903",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q25",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      8,
+      null
+     ],
+     "top_papers": [
+      "2212.10560",
+      "2212.10560",
+      "2212.10560",
+      "2212.10560",
+      "2212.10560"
+     ]
+    },
+    {
+     "id": "q26",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q27",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2302.13971",
+      "2001.08361",
+      "2203.15556",
+      "2305.14314",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q28",
+     "type": "single",
+     "rank": 10,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      10
+     ],
+     "top_papers": [
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442"
+     ]
+    },
+    {
+     "id": "q29",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q30",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q31",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q32",
+     "type": "single",
+     "rank": 3,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      3
+     ],
+     "top_papers": [
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q33",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291"
+     ]
+    },
+    {
+     "id": "q34",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172"
+     ]
+    },
+    {
+     "id": "q35",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 7,
+     "evidence_ranks": [
+      4,
+      null
+     ],
+     "top_papers": [
+      "2306.05685",
+      "2306.05685",
+      "2305.14314",
+      "2306.05685",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q36",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.18290",
+      "2305.18290",
+      "2305.18290",
+      "2305.14314",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q37",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q38",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2310.11511"
+     ]
+    },
+    {
+     "id": "q39",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q40",
+     "type": "single",
+     "rank": 6,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      6
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997"
+     ]
+    }
+   ]
+  },
+  "ctx_bm25": {
+   "recall": {
+    "recall@1": 0.265,
+    "recall@3": 0.441,
+    "recall@5": 0.559,
+    "recall@10": 0.647
+   },
+   "paper_recall": {
+    "paper_recall@1": 0.735,
+    "paper_recall@3": 0.853,
+    "paper_recall@5": 0.912,
+    "paper_recall@10": 0.941
+   },
+   "median_latency_s": 0.01,
+   "per_question": [
+    {
+     "id": "q01",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473"
+     ]
+    },
+    {
+     "id": "q02",
+     "type": "single",
+     "rank": 4,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      4
+     ],
+     "top_papers": [
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385"
+     ]
+    },
+    {
+     "id": "q03",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781"
+     ]
+    },
+    {
+     "id": "q04",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q05",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      1
+     ],
+     "top_papers": [
+      "1412.6980",
+      "1412.6980",
+      "1412.6980",
+      "2006.11239",
+      "1412.6980"
+     ]
+    },
+    {
+     "id": "q06",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762"
+     ]
+    },
+    {
+     "id": "q07",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 3,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2106.09685",
+      "1810.04805",
+      "2201.11903",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q08",
+     "type": "single",
+     "rank": 6,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      6
+     ],
+     "top_papers": [
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906"
+     ]
+    },
+    {
+     "id": "q09",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2002.08909",
+      "2112.04426",
+      "1810.04805",
+      "2312.00752",
+      "2203.15556"
+     ]
+    },
+    {
+     "id": "q10",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361"
+     ]
+    },
+    {
+     "id": "q11",
+     "type": "cross",
+     "rank": 5,
+     "paper_rank": 5,
+     "evidence_ranks": [
+      2,
+      5
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2002.08909",
+      "2112.09332",
+      "2002.08909",
+      "2005.11401"
+     ]
+    },
+    {
+     "id": "q12",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239"
+     ]
+    },
+    {
+     "id": "q13",
+     "type": "single",
+     "rank": 5,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      5
+     ],
+     "top_papers": [
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685"
+     ]
+    },
+    {
+     "id": "q14",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 2,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2212.08073",
+      "2112.04426",
+      "2112.04426",
+      "2002.08909",
+      "2002.08909"
+     ]
+    },
+    {
+     "id": "q15",
+     "type": "single",
+     "rank": 7,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      7
+     ],
+     "top_papers": [
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300"
+     ]
+    },
+    {
+     "id": "q16",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2010.11929"
+     ]
+    },
+    {
+     "id": "q17",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332"
+     ]
+    },
+    {
+     "id": "q18",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q19",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556"
+     ]
+    },
+    {
+     "id": "q20",
+     "type": "cross",
+     "rank": 5,
+     "paper_rank": 5,
+     "evidence_ranks": [
+      5,
+      2
+     ],
+     "top_papers": [
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q21",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q22",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q23",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 2,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2201.11903",
+      "2302.04761",
+      "2302.04761",
+      "2201.11903",
+      "2302.04761"
+     ]
+    },
+    {
+     "id": "q24",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2210.03629",
+      "2210.03629",
+      "2210.03629",
+      "2201.11903",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q25",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 10,
+     "evidence_ranks": [
+      null,
+      1
+     ],
+     "top_papers": [
+      "2212.08073",
+      "2212.08073",
+      "2212.08073",
+      "2305.14314",
+      "2212.08073"
+     ]
+    },
+    {
+     "id": "q26",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q27",
+     "type": "single",
+     "rank": 3,
+     "paper_rank": 3,
+     "evidence_ranks": [
+      3
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2001.08361",
+      "2302.13971",
+      "2302.13971",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q28",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442"
+     ]
+    },
+    {
+     "id": "q29",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q30",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2112.04426",
+      "2112.04426"
+     ]
+    },
+    {
+     "id": "q31",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q32",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q33",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291"
+     ]
+    },
+    {
+     "id": "q34",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172"
+     ]
+    },
+    {
+     "id": "q35",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      3,
+      null
+     ],
+     "top_papers": [
+      "2306.05685",
+      "2306.05685",
+      "2306.05685",
+      "2306.05685",
+      "2306.05685"
+     ]
+    },
+    {
+     "id": "q36",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.18290",
+      "2305.18290",
+      "2305.18290",
+      "2305.18290",
+      "2305.18290"
+     ]
+    },
+    {
+     "id": "q37",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2310.06825"
+     ]
+    },
+    {
+     "id": "q38",
+     "type": "single",
+     "rank": 3,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      3
+     ],
+     "top_papers": [
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2303.11366",
+      "2310.11511"
+     ]
+    },
+    {
+     "id": "q39",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q40",
+     "type": "single",
+     "rank": 8,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      8
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997"
+     ]
+    }
+   ]
+  },
+  "ctx_hybrid_rrf": {
+   "recall": {
+    "recall@1": 0.441,
+    "recall@3": 0.529,
+    "recall@5": 0.559,
+    "recall@10": 0.735
+   },
+   "paper_recall": {
+    "paper_recall@1": 0.853,
+    "paper_recall@3": 0.882,
+    "paper_recall@5": 0.912,
+    "paper_recall@10": 0.941
+   },
+   "median_latency_s": 0.024,
+   "per_question": [
+    {
+     "id": "q01",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473"
+     ]
+    },
+    {
+     "id": "q02",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385"
+     ]
+    },
+    {
+     "id": "q03",
+     "type": "single",
+     "rank": 8,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      8
+     ],
+     "top_papers": [
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781"
+     ]
+    },
+    {
+     "id": "q04",
+     "type": "single",
+     "rank": 8,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      8
+     ],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762"
+     ]
+    },
+    {
+     "id": "q05",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "1412.6980",
+      "1412.6980",
+      "1412.6980",
+      "1412.6980",
+      "1412.6980"
+     ]
+    },
+    {
+     "id": "q06",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762"
+     ]
+    },
+    {
+     "id": "q07",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "1810.04805",
+      "1810.04805",
+      "1810.04805",
+      "1810.04805",
+      "1810.04805"
+     ]
+    },
+    {
+     "id": "q08",
+     "type": "single",
+     "rank": 6,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      6
+     ],
+     "top_papers": [
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906"
+     ]
+    },
+    {
+     "id": "q09",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2002.08909",
+      "2002.08909",
+      "1706.03762",
+      "2112.04426",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q10",
+     "type": "single",
+     "rank": 9,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      9
+     ],
+     "top_papers": [
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361"
+     ]
+    },
+    {
+     "id": "q11",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 5,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2005.11401",
+      "2005.11401",
+      "2312.10997",
+      "2002.08909"
+     ]
+    },
+    {
+     "id": "q12",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239"
+     ]
+    },
+    {
+     "id": "q13",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685"
+     ]
+    },
+    {
+     "id": "q14",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2112.04426",
+      "2112.04426",
+      "2112.04426",
+      "2112.04426",
+      "2112.04426"
+     ]
+    },
+    {
+     "id": "q15",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300"
+     ]
+    },
+    {
+     "id": "q16",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2006.11239",
+      "2010.11929",
+      "2010.11929",
+      "2010.11929",
+      "2010.11929"
+     ]
+    },
+    {
+     "id": "q17",
+     "type": "single",
+     "rank": 6,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      6
+     ],
+     "top_papers": [
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332"
+     ]
+    },
+    {
+     "id": "q18",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q19",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556"
+     ]
+    },
+    {
+     "id": "q20",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      4
+     ],
+     "top_papers": [
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171"
+     ]
+    },
+    {
+     "id": "q21",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q22",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q23",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2302.04761",
+      "2302.04761",
+      "2302.04761",
+      "2302.04761",
+      "2302.04761"
+     ]
+    },
+    {
+     "id": "q24",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2210.03629",
+      "2201.11903",
+      "2210.03629",
+      "2201.11903",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q25",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 3,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "2212.10560",
+      "2212.10560",
+      "2212.08073",
+      "2212.10560",
+      "2212.10560"
+     ]
+    },
+    {
+     "id": "q26",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q27",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2302.13971",
+      "2001.08361",
+      "2106.09685",
+      "2312.00752",
+      "2302.13971"
+     ]
+    },
+    {
+     "id": "q28",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442"
+     ]
+    },
+    {
+     "id": "q29",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q30",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q31",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q32",
+     "type": "single",
+     "rank": 4,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      4
+     ],
+     "top_papers": [
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q33",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291"
+     ]
+    },
+    {
+     "id": "q34",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172"
+     ]
+    },
+    {
+     "id": "q35",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 9,
+     "evidence_ranks": [
+      2,
+      null
+     ],
+     "top_papers": [
+      "2306.05685",
+      "2306.05685",
+      "2306.05685",
+      "2306.05685",
+      "2306.05685"
+     ]
+    },
+    {
+     "id": "q36",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.18290",
+      "2305.18290",
+      "2305.18290",
+      "2305.18290",
+      "2305.18290"
+     ]
+    },
+    {
+     "id": "q37",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q38",
+     "type": "single",
+     "rank": 8,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      8
+     ],
+     "top_papers": [
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2310.11511"
+     ]
+    },
+    {
+     "id": "q39",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q40",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997"
+     ]
+    }
+   ]
+  },
+  "ctx_hybrid_rrf+rerank[bge-reranker-base]": {
+   "recall": {
+    "recall@1": 0.382,
+    "recall@3": 0.559,
+    "recall@5": 0.618,
+    "recall@10": 0.647
+   },
+   "paper_recall": {
+    "paper_recall@1": 0.824,
+    "paper_recall@3": 0.853,
+    "paper_recall@5": 0.882,
+    "paper_recall@10": 0.941
+   },
+   "median_latency_s": 6.945,
+   "per_question": [
+    {
+     "id": "q01",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473",
+      "1409.0473"
+     ]
+    },
+    {
+     "id": "q02",
+     "type": "single",
+     "rank": 3,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      3
+     ],
+     "top_papers": [
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385",
+      "1512.03385"
+     ]
+    },
+    {
+     "id": "q03",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781",
+      "1301.3781"
+     ]
+    },
+    {
+     "id": "q04",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762"
+     ]
+    },
+    {
+     "id": "q05",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      1
+     ],
+     "top_papers": [
+      "1412.6980",
+      "1412.6980",
+      "1412.6980",
+      "1412.6980",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q06",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762",
+      "1706.03762"
+     ]
+    },
+    {
+     "id": "q07",
+     "type": "single",
+     "rank": 10,
+     "paper_rank": 3,
+     "evidence_ranks": [
+      10
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2312.00752",
+      "1810.04805",
+      "1810.04805",
+      "1810.04805"
+     ]
+    },
+    {
+     "id": "q08",
+     "type": "single",
+     "rank": 5,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      5
+     ],
+     "top_papers": [
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906",
+      "2004.04906"
+     ]
+    },
+    {
+     "id": "q09",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2002.08909",
+      "2002.08909",
+      "2002.08909",
+      "2002.08909",
+      "2002.08909"
+     ]
+    },
+    {
+     "id": "q10",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361",
+      "2001.08361"
+     ]
+    },
+    {
+     "id": "q11",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 9,
+     "evidence_ranks": [
+      2,
+      null
+     ],
+     "top_papers": [
+      "2112.09332",
+      "2002.08909",
+      "2312.10997",
+      "2312.10997",
+      "2002.08909"
+     ]
+    },
+    {
+     "id": "q12",
+     "type": "single",
+     "rank": 3,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      3
+     ],
+     "top_papers": [
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "2006.11239"
+     ]
+    },
+    {
+     "id": "q13",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685",
+      "2106.09685"
+     ]
+    },
+    {
+     "id": "q14",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2112.04426",
+      "2112.04426",
+      "2112.04426",
+      "2112.04426",
+      "2112.04426"
+     ]
+    },
+    {
+     "id": "q15",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300",
+      "2009.03300"
+     ]
+    },
+    {
+     "id": "q16",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2006.11239",
+      "2006.11239",
+      "2006.11239",
+      "1512.03385",
+      "2006.11239"
+     ]
+    },
+    {
+     "id": "q17",
+     "type": "single",
+     "rank": 5,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      5
+     ],
+     "top_papers": [
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332",
+      "2112.09332"
+     ]
+    },
+    {
+     "id": "q18",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q19",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556",
+      "2203.15556"
+     ]
+    },
+    {
+     "id": "q20",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [
+      null,
+      6
+     ],
+     "top_papers": [
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171",
+      "2203.11171"
+     ]
+    },
+    {
+     "id": "q21",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916",
+      "2205.11916"
+     ]
+    },
+    {
+     "id": "q22",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q23",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2302.04761",
+      "2302.04761",
+      "2302.04761",
+      "2302.04761",
+      "2302.04761"
+     ]
+    },
+    {
+     "id": "q24",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2210.03629",
+      "2201.11903",
+      "2210.03629",
+      "2210.03629",
+      "2201.11903"
+     ]
+    },
+    {
+     "id": "q25",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 4,
+     "evidence_ranks": [
+      null,
+      null
+     ],
+     "top_papers": [
+      "2212.10560",
+      "2212.10560",
+      "2212.10560",
+      "2212.08073",
+      "2212.10560"
+     ]
+    },
+    {
+     "id": "q26",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135",
+      "2205.14135"
+     ]
+    },
+    {
+     "id": "q27",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2302.13971",
+      "2302.13971",
+      "2312.00752",
+      "2312.00752",
+      "2001.08361"
+     ]
+    },
+    {
+     "id": "q28",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442",
+      "2304.03442"
+     ]
+    },
+    {
+     "id": "q29",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q30",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.14314",
+      "2305.14314"
+     ]
+    },
+    {
+     "id": "q31",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601",
+      "2305.10601"
+     ]
+    },
+    {
+     "id": "q32",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q33",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291",
+      "2305.16291"
+     ]
+    },
+    {
+     "id": "q34",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172"
+     ]
+    },
+    {
+     "id": "q35",
+     "type": "cross",
+     "rank": null,
+     "paper_rank": 7,
+     "evidence_ranks": [
+      4,
+      null
+     ],
+     "top_papers": [
+      "2306.05685",
+      "2306.05685",
+      "2306.05685",
+      "2306.05685",
+      "2306.05685"
+     ]
+    },
+    {
+     "id": "q36",
+     "type": "unanswerable",
+     "rank": null,
+     "paper_rank": null,
+     "evidence_ranks": [],
+     "top_papers": [
+      "2305.18290",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172",
+      "2307.03172"
+     ]
+    },
+    {
+     "id": "q37",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2310.06825",
+      "2309.06180"
+     ]
+    },
+    {
+     "id": "q38",
+     "type": "single",
+     "rank": 1,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      1
+     ],
+     "top_papers": [
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2310.11511",
+      "2310.11511"
+     ]
+    },
+    {
+     "id": "q39",
+     "type": "single",
+     "rank": 2,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      2
+     ],
+     "top_papers": [
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752",
+      "2312.00752"
+     ]
+    },
+    {
+     "id": "q40",
+     "type": "single",
+     "rank": null,
+     "paper_rank": 1,
+     "evidence_ranks": [
+      null
+     ],
+     "top_papers": [
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997",
+      "2312.10997"
+     ]
+    }
+   ]
+  }
+ }
+}

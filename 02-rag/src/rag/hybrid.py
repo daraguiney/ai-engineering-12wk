@@ -18,11 +18,11 @@ def tokenize(text: str) -> list[str]:
 
 
 class Bm25Index:
-    def __init__(self, rows: list[Hit]):
+    def __init__(self, rows: list[Hit], text_key: str = "text"):
         if not rows:
             raise ValueError("no chunks to index")
         self._rows = rows
-        self._bm25 = BM25Okapi([tokenize(r["text"]) for r in rows])
+        self._bm25 = BM25Okapi([tokenize(r[text_key]) for r in rows])
 
 
 def bm25_search(index: Bm25Index, query: str, k: int = 5) -> list[Hit]:

@@ -1,0 +1,930 @@
+{
+ "summary": {
+  "variant": "hybrid_rerank",
+  "answer_model": "claude-sonnet-5-5",
+  "judge_model": "claude-opus-5-5",
+  "answerable": 34,
+  "errors": 0,
+  "judge_errors": 0,
+  "correctness": 0.662,
+  "verdicts": {
+   "correct": 22,
+   "partial": 1,
+   "incorrect": 1
+  },
+  "wrongly_abstained": 10,
+  "trap_abstained": "6/6",
+  "serving_cost_per_query_usd": 0.0083,
+  "median_latency_s": 21.04,
+  "judge_tokens": {
+   "input": 18368,
+   "output": 2173
+  }
+ },
+ "records": [
+  {
+   "id": "q01",
+   "type": "single",
+   "question": "In the attention-based neural machine translation paper (RNNsearch, Bahdanau et al.), how many sentences contribute to each gradient update direction, and roughly how long was each model trained?",
+   "answerable": true,
+   "answer": "Each SGD update direction is computed using a minibatch of 80 sentences, and each model was trained for approximately 5 days [1].",
+   "cited": [
+    {
+     "arxiv_id": "1409.0473",
+     "chunk_index": 16
+    }
+   ],
+   "usage": {
+    "input_tokens": 3271,
+    "output_tokens": 66
+   },
+   "latency_s": 22.74,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives both facts in the reference: a minibatch of 80 sentences per SGD update and about 5 days of training per model.",
+    "usage": {
+     "input_tokens": 708,
+     "output_tokens": 59
+    }
+   }
+  },
+  {
+   "id": "q02",
+   "type": "single",
+   "question": "In the deep residual learning paper, what test error on CIFAR-10 did the extremely deep network with over a thousand layers obtain?",
+   "answerable": true,
+   "answer": "The 1202-layer network (n = 200) on CIFAR-10 reached a test error of 7.93% (Table 6), with training error below 0.1%.",
+   "cited": [
+    {
+     "arxiv_id": "1512.03385",
+     "chunk_index": 34
+    }
+   ],
+   "usage": {
+    "input_tokens": 3479,
+    "output_tokens": 73
+   },
+   "latency_s": 19.49,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same 7.93% test error for the 1202-layer network as the reference, and its extra detail (training error below 0.1%) is accurate.",
+    "usage": {
+     "input_tokens": 791,
+     "output_tokens": 73
+    }
+   }
+  },
+  {
+   "id": "q03",
+   "type": "single",
+   "question": "In the original word2vec paper (Efficient Estimation of Word Representations in Vector Space), what initial step size was used for SGD in the Table 2 and 4 experiments, and how was it annealed over training?",
+   "answerable": true,
+   "answer": "In the Table 2 and 4 experiments, the word2vec paper used three training epochs of stochastic gradient descent with backpropagation, starting at a learning rate of 0.025. The rate was decreased linearly so that it approaches zero at the end of the last training epoch.",
+   "cited": [
+    {
+     "arxiv_id": "1301.3781",
+     "chunk_index": 22
+    }
+   ],
+   "usage": {
+    "input_tokens": 3261,
+    "output_tokens": 112
+   },
+   "latency_s": 18.97,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate matches the reference on every point: a starting rate of 0.025, linear decay approaching zero by the end of the last epoch, and three epochs.",
+    "usage": {
+     "input_tokens": 778,
+     "output_tokens": 71
+    }
+   }
+  },
+  {
+   "id": "q04",
+   "type": "single",
+   "question": "When training the Transformer from 'Attention Is All You Need', what value was used for softening the one-hot training targets, and how did this affect perplexity versus accuracy and BLEU?",
+   "answerable": true,
+   "answer": "The Transformer was trained with label smoothing of value ϵls = 0.1. This hurt perplexity, as the model learns to be more unsure, but improved accuracy and BLEU score.",
+   "cited": [
+    {
+     "arxiv_id": "1706.03762",
+     "chunk_index": 22
+    },
+    {
+     "arxiv_id": "1706.03762",
+     "chunk_index": 21
+    }
+   ],
+   "usage": {
+    "input_tokens": 3618,
+    "output_tokens": 88
+   },
+   "latency_s": 20.07,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same label smoothing value of 0.1 and the same effects: perplexity gets worse while accuracy and BLEU improve, matching the reference.",
+    "usage": {
+     "input_tokens": 762,
+     "output_tokens": 71
+    }
+   }
+  },
+  {
+   "id": "q05",
+   "type": "cross",
+   "question": "How do the second-moment decay rate and the numerical-stability constant used to train the Transformer differ from the values the original Adam paper recommends as good defaults?",
+   "answerable": true,
+   "answer": "They don't differ for β2, and the sources don't give a different epsilon for the ViT. The ViT paper trains with Adam using β2 = 0.999 [1], which matches the Adam paper's recommended default of β2 = 0.999 [2]. The ViT paper does not state an ϵ value, so no comparison with the Adam default of ϵ = 10−8 can be made [1][2].",
+   "cited": [
+    {
+     "arxiv_id": "2010.11929",
+     "chunk_index": 16
+    },
+    {
+     "arxiv_id": "1412.6980",
+     "chunk_index": 4
+    }
+   ],
+   "usage": {
+    "input_tokens": 3881,
+    "output_tokens": 152
+   },
+   "latency_s": 19.93,
+   "judge": {
+    "verdict": "incorrect",
+    "score": 0.0,
+    "reason": "The candidate answers about ViT rather than the Transformer, says β2 does not differ (contradicting the reference's 0.98 vs 0.999), and wrongly claims that no ϵ value is given, when the Transformer paper states ϵ = 10−9.",
+    "usage": {
+     "input_tokens": 876,
+     "output_tokens": 103
+    }
+   }
+  },
+  {
+   "id": "q06",
+   "type": "unanswerable",
+   "question": "How many kilowatt-hours of electricity were consumed in training the base Transformer model on WMT 2014 English-to-German?",
+   "answerable": false,
+   "answer": "The papers provided do not state how many kilowatt-hours of electricity were used to train the base Transformer model. They report only training time (100,000 steps or 12 hours on 8 P100 GPUs) and training cost in other units.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3319,
+    "output_tokens": 94
+   },
+   "latency_s": 21.66
+  },
+  {
+   "id": "q07",
+   "type": "single",
+   "question": "During the original BERT pre-training run, how many tokens go through the model in each update, and how many updates are performed in total?",
+   "answerable": false,
+   "answer": "The papers provided do not state how many tokens go through BERT in each pre-training update or how many updates are performed in total.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3312,
+    "output_tokens": 58
+   },
+   "latency_s": 23.94
+  },
+  {
+   "id": "q08",
+   "type": "single",
+   "question": "In the main Dense Passage Retriever configuration, what mini-batch size is used and what extra hard negative is added for every question?",
+   "answerable": true,
+   "answer": "The main DPR model is trained with in-batch negatives using a batch size of 128, plus one additional BM25 negative passage per question [4].",
+   "cited": [
+    {
+     "arxiv_id": "2004.04906",
+     "chunk_index": 18
+    }
+   ],
+   "usage": {
+    "input_tokens": 3505,
+    "output_tokens": 68
+   },
+   "latency_s": 23.88,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate matches the reference on both points: a batch size of 128 and one additional BM25 negative passage per question.",
+    "usage": {
+     "input_tokens": 700,
+     "output_tokens": 53
+    }
+   }
+  },
+  {
+   "id": "q09",
+   "type": "single",
+   "question": "What hardware, number of optimisation steps, mini-batch size and learning rate did the REALM authors use for its pre-training phase?",
+   "answerable": true,
+   "answer": "REALM was pre-trained for 200k steps on 64 Google Cloud TPUs, with a batch size of 512 and a learning rate of 3e-5, using BERT's default optimizer. The document embedding step for the MIPS index was parallelized over 16 TPUs.",
+   "cited": [
+    {
+     "arxiv_id": "2002.08909",
+     "chunk_index": 29
+    }
+   ],
+   "usage": {
+    "input_tokens": 3445,
+    "output_tokens": 114
+   },
+   "latency_s": 21.61,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives all four required details: 64 Google Cloud TPUs, 200k steps, batch size 512 and learning rate 3e-5. The extra details (BERT's default optimizer, 16 TPUs for embedding) are accurate and do not contradict the reference.",
+    "usage": {
+     "input_tokens": 775,
+     "output_tokens": 106
+    }
+   }
+  },
+  {
+   "id": "q10",
+   "type": "single",
+   "question": "According to the neural language model scaling-law study, as the model size N is increased, how should the dataset size D grow, and with what exponent?",
+   "answerable": true,
+   "answer": "As model size N increases, the dataset size D should grow sublinearly, as D ∝ N^(αN/αD) ∼ N^0.74 [1]. To avoid overfitting, the paper requires D ≳ (5 × 10^3) N^0.74 [4].",
+   "cited": [
+    {
+     "arxiv_id": "2001.08361",
+     "chunk_index": 11
+    },
+    {
+     "arxiv_id": "2001.08361",
+     "chunk_index": 33
+    }
+   ],
+   "usage": {
+    "input_tokens": 3395,
+    "output_tokens": 113
+   },
+   "latency_s": 20.97,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate correctly states that dataset size should grow sublinearly as D ∝ N^0.74, matching the reference, and its extra overfitting detail (D ≳ 5×10^3 N^0.74) is consistent with the paper.",
+    "usage": {
+     "input_tokens": 758,
+     "output_tokens": 94
+    }
+   }
+  },
+  {
+   "id": "q11",
+   "type": "cross",
+   "question": "When training the retrieval-augmented components, how does REALM's handling of the document embeddings and search index compare with that of the Retrieval-Augmented Generation (RAG) model of Lewis et al.?",
+   "answerable": false,
+   "answer": "The papers provided do not state how REALM and the RAG model of Lewis et al. each handle document embeddings and the search index during training. They only describe REALM as backpropagating through a retrieval step over an entire corpus, and RAG's non-parametric memory as a dense vector index of Wikipedia accessed with a pre-trained neural retriever.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3282,
+    "output_tokens": 133
+   },
+   "latency_s": 16.62
+  },
+  {
+   "id": "q12",
+   "type": "single",
+   "question": "In the denoising diffusion model that reached an FID of 3.17 on CIFAR10, how are the noise levels of the forward process set across the sampling chain, and what are the endpoint values?",
+   "answerable": true,
+   "answer": "The forward process variances βt are fixed to constants that increase linearly from β1 = 10^−4 to βT = 0.02 [3]. They were chosen to be small relative to data scaled to [−1, 1], so the reverse and forward processes have approximately the same functional form [3].",
+   "cited": [
+    {
+     "arxiv_id": "2006.11239",
+     "chunk_index": 15
+    }
+   ],
+   "usage": {
+    "input_tokens": 3910,
+    "output_tokens": 114
+   },
+   "latency_s": 32.25,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate correctly says the variances are fixed constants increasing linearly from 1e-4 to 0.02, which matches the reference; it leaves out T=1000, but that is a minor detail and the core content is complete.",
+    "usage": {
+     "input_tokens": 790,
+     "output_tokens": 87
+    }
+   }
+  },
+  {
+   "id": "q13",
+   "type": "single",
+   "question": "How much does low-rank adaptation of GPT-3 175B shrink the amount of GPU memory needed during training compared with full fine-tuning?",
+   "answerable": true,
+   "answer": "On GPT-3 175B, LoRA reduces training VRAM consumption from 1.2TB to 350GB [1], which the abstract describes as a 3 times reduction in GPU memory requirement compared with GPT-3 175B fine-tuned with Adam [2].",
+   "cited": [
+    {
+     "arxiv_id": "2106.09685",
+     "chunk_index": 16
+    },
+    {
+     "arxiv_id": "2106.09685",
+     "chunk_index": 0
+    }
+   ],
+   "usage": {
+    "input_tokens": 3866,
+    "output_tokens": 116
+   },
+   "latency_s": 19.99,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same figures as the reference, 1.2TB down to 350GB, and its added detail about the 3x reduction is consistent with the paper.",
+    "usage": {
+     "input_tokens": 733,
+     "output_tokens": 67
+    }
+   }
+  },
+  {
+   "id": "q14",
+   "type": "single",
+   "question": "For the Retro language model, how large is the document store searched at evaluation time, and how does it differ from the store used during training?",
+   "answerable": false,
+   "answer": "The papers provided do not state the size of the document store searched at evaluation time or how it differs from the training store. They only say Retro retrieves from databases with trillions of tokens and that gains grow with database size.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3232,
+    "output_tokens": 85
+   },
+   "latency_s": 20.7
+  },
+  {
+   "id": "q15",
+   "type": "single",
+   "question": "On the 57-subject multitask test introduced by Hendrycks et al., what score do non-specialist crowd workers get?",
+   "answerable": true,
+   "answer": "Table 6 in the Chinchilla paper, which takes its human comparisons from Hendrycks et al., lists the average human rater at 34.5% on the 57-task MMLU, against 89.8% for average human experts [2]. The sources do not explicitly call these raters \"crowd workers\", so I am reading \"average human rater\" as the non-specialist group.",
+   "cited": [
+    {
+     "arxiv_id": "2203.15556",
+     "chunk_index": 31
+    },
+    {
+     "arxiv_id": "2009.03300",
+     "chunk_index": 0
+    }
+   ],
+   "usage": {
+    "input_tokens": 3536,
+    "output_tokens": 564
+   },
+   "latency_s": 25.77,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the reference figure of 34.5% for non-specialist human raters. Its hedge about the term \"crowd workers\" concerns wording only and does not deny the number the reference states.",
+    "usage": {
+     "input_tokens": 743,
+     "output_tokens": 282
+    }
+   }
+  },
+  {
+   "id": "q16",
+   "type": "unanswerable",
+   "question": "What FID score does the DDPM model obtain when trained on 256x256 ImageNet?",
+   "answerable": false,
+   "answer": "The papers provided do not state an FID score for DDPM trained on 256x256 ImageNet. They report results for CIFAR10 (FID 3.17) and LSUN Church and Bedroom, but not ImageNet.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3497,
+    "output_tokens": 94
+   },
+   "latency_s": 19.4
+  },
+  {
+   "id": "q17",
+   "type": "single",
+   "question": "In the WebGPT browser-assisted question-answering work, how does the approach of drawing several candidate answers and keeping the reward model's top pick differ from reinforcement learning in terms of what it costs?",
+   "answerable": false,
+   "answer": "The papers provided do not state how the cost of rejection sampling differs from that of reinforcement learning. They only say that RL gives some benefit when inference-time compute is more limited.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3245,
+    "output_tokens": 353
+   },
+   "latency_s": 19.48
+  },
+  {
+   "id": "q18",
+   "type": "single",
+   "question": "What accuracy did the 'Let's think step by step' trigger-phrase method reach on MultiArith with large-scale InstructGPT, compared with the plain zero-shot baseline?",
+   "answerable": true,
+   "answer": "With large-scale InstructGPT (text-davinci-002), the Zero-shot-CoT method (\"Let's think step by step\") reached 78.7% accuracy on MultiArith, compared with 17.7% for the plain zero-shot baseline [1][3][4].",
+   "cited": [
+    {
+     "arxiv_id": "2205.11916",
+     "chunk_index": 8
+    },
+    {
+     "arxiv_id": "2205.11916",
+     "chunk_index": 0
+    },
+    {
+     "arxiv_id": "2205.11916",
+     "chunk_index": 1
+    }
+   ],
+   "usage": {
+    "input_tokens": 3691,
+    "output_tokens": 119
+   },
+   "latency_s": 28.91,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same figures as the reference: 78.7% for Zero-shot-CoT versus 17.7% for the plain zero-shot baseline on MultiArith.",
+    "usage": {
+     "input_tokens": 805,
+     "output_tokens": 79
+    }
+   }
+  },
+  {
+   "id": "q19",
+   "type": "single",
+   "question": "Which optimizer did the Chinchilla compute-optimal language model use instead of the one used for Gopher, and why did the authors prefer it?",
+   "answerable": true,
+   "answer": "Chinchilla was trained with AdamW rather than Adam, which the authors say improves the language modelling loss and the downstream task performance after finetuning [3].",
+   "cited": [
+    {
+     "arxiv_id": "2203.15556",
+     "chunk_index": 27
+    }
+   ],
+   "usage": {
+    "input_tokens": 3501,
+    "output_tokens": 74
+   },
+   "latency_s": 17.84,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate correctly names AdamW instead of Adam and gives the same reasons as the reference: improved language modelling loss and better downstream performance after finetuning.",
+    "usage": {
+     "input_tokens": 744,
+     "output_tokens": 69
+    }
+   }
+  },
+  {
+   "id": "q20",
+   "type": "cross",
+   "question": "How does the way answers are decoded from the language model in the original chain-of-thought prompting evaluation differ from the decoding setup in the self-consistency method for LaMDA-137B?",
+   "answerable": true,
+   "answer": "The original chain-of-thought prompting uses greedy decoding, producing a single reasoning path. Self-consistency replaces the greedy decode with sampling from the model's decoder to generate a diverse set of reasoning paths, then aggregates by choosing the most consistent final answer; for LaMDA-137B the comparisons use 40 sampled paths.",
+   "cited": [
+    {
+     "arxiv_id": "2203.11171",
+     "chunk_index": 5
+    },
+    {
+     "arxiv_id": "2203.11171",
+     "chunk_index": 30
+    },
+    {
+     "arxiv_id": "2203.11171",
+     "chunk_index": 64
+    }
+   ],
+   "usage": {
+    "input_tokens": 3705,
+    "output_tokens": 142
+   },
+   "latency_s": 23.02,
+   "judge": {
+    "verdict": "partial",
+    "score": 0.5,
+    "reason": "The candidate correctly contrasts greedy decoding with sampling plus majority aggregation, but it omits the specific settings the reference gives for LaMDA-137B: temperature T=0.5 and top-k truncation at k=40.",
+    "usage": {
+     "input_tokens": 882,
+     "output_tokens": 169
+    }
+   }
+  },
+  {
+   "id": "q21",
+   "type": "unanswerable",
+   "question": "What was the total dollar cost of the OpenAI API calls used to run the Zero-shot-CoT experiments on GSM8K?",
+   "answerable": false,
+   "answer": "The papers provided do not state the total dollar cost of the OpenAI API calls used to run the Zero-shot-CoT experiments on GSM8K. They only give costs for other work, such as the Self-Instruct dataset generation (around $600) and finetuning (a $338 cost).",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3920,
+    "output_tokens": 113
+   },
+   "latency_s": 33.04
+  },
+  {
+   "id": "q22",
+   "type": "single",
+   "question": "In FlashAttention's gradient computation, why does re-deriving the attention matrix instead of storing it not make training slower, even though it adds arithmetic?",
+   "answerable": true,
+   "answer": "FlashAttention stores only the softmax normalization factor from the forward pass and recomputes attention on-chip in the backward pass, which is faster than reading the intermediate attention matrix from HBM [5]. Even with the extra FLOPs from recomputation, it runs faster (up to 7.6x on GPT-2) because of the massively reduced HBM access [5].",
+   "cited": [
+    {
+     "arxiv_id": "2205.14135",
+     "chunk_index": 5
+    }
+   ],
+   "usage": {
+    "input_tokens": 3855,
+    "output_tokens": 142
+   },
+   "latency_s": 32.11,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate says the recomputation stays fast despite the extra FLOPs because it greatly reduces HBM accesses, which matches the reference; its other details are consistent with the paper.",
+    "usage": {
+     "input_tokens": 790,
+     "output_tokens": 75
+    }
+   }
+  },
+  {
+   "id": "q23",
+   "type": "single",
+   "question": "At roughly what model size did Toolformer's gains from calling external APIs begin to show up in the GPT-2 family experiments?",
+   "answerable": true,
+   "answer": "The ability to leverage the provided tools only emerges at around 775M parameters; smaller models achieve similar performance with and without tools. The exception is the Wikipedia search engine, which the authors hypothesize is comparably easy to use.",
+   "cited": [
+    {
+     "arxiv_id": "2302.04761",
+     "chunk_index": 32
+    }
+   ],
+   "usage": {
+    "input_tokens": 3552,
+    "output_tokens": 99
+   },
+   "latency_s": 34.03,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same ~775M parameter threshold and the same point that smaller models perform similarly with or without tools, and its extra Wikipedia-search detail is consistent with the paper.",
+    "usage": {
+     "input_tokens": 730,
+     "output_tokens": 78
+    }
+   }
+  },
+  {
+   "id": "q24",
+   "type": "single",
+   "question": "In the manual error analysis of HotpotQA trajectories, how often did chain-of-thought prompting produce a wrong-but-counted-correct answer due to fabricated facts, compared with the reasoning-plus-acting approach?",
+   "answerable": true,
+   "answer": "In the HotpotQA error analysis, CoT had a false-positive rate (hallucinated reasoning trace or facts, yet counted as success) of 14%, versus 6% for ReAct.",
+   "cited": [
+    {
+     "arxiv_id": "2210.03629",
+     "chunk_index": 22
+    }
+   ],
+   "usage": {
+    "input_tokens": 3495,
+    "output_tokens": 263
+   },
+   "latency_s": 28.57,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same false-positive rates as the reference, 14% for CoT and 6% for ReAct, and frames them the same way: hallucinated answers that were counted as successes.",
+    "usage": {
+     "input_tokens": 758,
+     "output_tokens": 76
+    }
+   }
+  },
+  {
+   "id": "q25",
+   "type": "cross",
+   "question": "Self-Instruct's instruction set generated from GPT-3 and Constitutional AI's red-team prompt set both rely on model-written prompts. Which contains more model-generated prompts, and what are the two counts?",
+   "answerable": false,
+   "answer": "The papers provided do not state this. Source [2] gives an example count for the Self-Instruct dataset (82,612), but the sources give no count for Constitutional AI's red-team prompt set, so the two cannot be compared.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3311,
+    "output_tokens": 93
+   },
+   "latency_s": 18.64
+  },
+  {
+   "id": "q26",
+   "type": "unanswerable",
+   "question": "What speedup does FlashAttention achieve when run on Google TPU hardware?",
+   "answerable": false,
+   "answer": "The papers provided do not state any FlashAttention speedup on Google TPU hardware.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3542,
+    "output_tokens": 50
+   },
+   "latency_s": 16.47
+  },
+  {
+   "id": "q27",
+   "type": "single",
+   "question": "In LLaMA pretraining, to what fraction of its peak value does the learning rate decay by the end of the cosine schedule, and what weight decay is applied?",
+   "answerable": true,
+   "answer": "LLaMA uses a cosine learning rate schedule whose final learning rate is 10% of the maximal learning rate, with a weight decay of 0.1 [1][2].",
+   "cited": [
+    {
+     "arxiv_id": "2302.13971",
+     "chunk_index": 9
+    },
+    {
+     "arxiv_id": "2302.13971",
+     "chunk_index": 10
+    }
+   ],
+   "usage": {
+    "input_tokens": 3777,
+    "output_tokens": 81
+   },
+   "latency_s": 18.35,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate matches the reference on both points: the final learning rate is 10% of the maximum, and the weight decay is 0.1.",
+    "usage": {
+     "input_tokens": 747,
+     "output_tokens": 58
+    }
+   }
+  },
+  {
+   "id": "q28",
+   "type": "single",
+   "question": "In the Generative Agents architecture, what numeric cutoff on accumulated event significance causes an agent to produce higher-level abstract thoughts, and about how often does this happen per simulated day?",
+   "answerable": true,
+   "answer": "Agents generate reflections when the sum of the importance scores for the latest events they perceived exceeds a threshold of 150. In practice, agents reflected roughly two or three times a day.",
+   "cited": [
+    {
+     "arxiv_id": "2304.03442",
+     "chunk_index": 46
+    },
+    {
+     "arxiv_id": "2304.03442",
+     "chunk_index": 45
+    }
+   ],
+   "usage": {
+    "input_tokens": 3048,
+    "output_tokens": 85
+   },
+   "latency_s": 14.33,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives both facts in the reference: a threshold of 150 on summed importance scores and reflection roughly two or three times a day.",
+    "usage": {
+     "input_tokens": 749,
+     "output_tokens": 60
+    }
+   }
+  },
+  {
+   "id": "q29",
+   "type": "single",
+   "question": "For the Game of 24 task, how much does Tree of Thoughts improve when its search keeps five candidate states per step instead of one?",
+   "answerable": true,
+   "answer": "ToT with breadth b=1 achieves a 45% success rate on Game of 24, while b=5 achieves 74%, an improvement of 29 percentage points.",
+   "cited": [
+    {
+     "arxiv_id": "2305.10601",
+     "chunk_index": 20
+    }
+   ],
+   "usage": {
+    "input_tokens": 3845,
+    "output_tokens": 76
+   },
+   "latency_s": 18.33,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same figures as the reference, 45% at b=1 and 74% at b=5, and its added 29-point difference is arithmetically correct.",
+    "usage": {
+     "input_tokens": 703,
+     "output_tokens": 67
+    }
+   }
+  },
+  {
+   "id": "q30",
+   "type": "single",
+   "question": "In QLoRA, what block sizes are used when quantizing the weights and when quantizing the first-level scaling factors, and why is the latter larger?",
+   "answerable": true,
+   "answer": "QLoRA uses a blocksize of 64 for the weights W, for higher quantization precision, and a blocksize of 256 for the second-level quantization of c2, to conserve memory [1].",
+   "cited": [
+    {
+     "arxiv_id": "2305.14314",
+     "chunk_index": 17
+    }
+   ],
+   "usage": {
+    "input_tokens": 3377,
+    "output_tokens": 86
+   },
+   "latency_s": 16.47,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate matches the reference: a blocksize of 64 for the weights, chosen for precision, and 256 for the second-level quantization of the constants, chosen to save memory.",
+    "usage": {
+     "input_tokens": 722,
+     "output_tokens": 74
+    }
+   }
+  },
+  {
+   "id": "q31",
+   "type": "unanswerable",
+   "question": "How much GPU memory in gigabytes does Tree of Thoughts require when solving Mini Crosswords with GPT-4?",
+   "answerable": false,
+   "answer": "The papers provided do not state how much GPU memory Tree of Thoughts requires for Mini Crosswords with GPT-4.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3486,
+    "output_tokens": 64
+   },
+   "latency_s": 18.44
+  },
+  {
+   "id": "q32",
+   "type": "single",
+   "question": "Why did the vLLM authors settle on a particular number of tokens per KV cache block as the default, rather than using much larger blocks?",
+   "answerable": false,
+   "answer": "The papers provided do not state why a particular default block size was chosen. They say only that larger blocks increase parallelism and hardware utilization but also increase memory fragmentation, and that the effect of block size is studied in §7.2.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3421,
+    "output_tokens": 93
+   },
+   "latency_s": 19.21
+  },
+  {
+   "id": "q33",
+   "type": "single",
+   "question": "In the Minecraft lifelong-learning agent Voyager, how much did the count of discovered items fall when the automatic curriculum was swapped for a random one?",
+   "answerable": true,
+   "answer": "The discovered item count dropped by 93% when the automatic curriculum was replaced with a random one [1].",
+   "cited": [
+    {
+     "arxiv_id": "2305.16291",
+     "chunk_index": 25
+    }
+   ],
+   "usage": {
+    "input_tokens": 3406,
+    "output_tokens": 57
+   },
+   "latency_s": 32.91,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same 93% drop in discovered item count that the reference states for replacing the automatic curriculum with a random one.",
+    "usage": {
+     "input_tokens": 684,
+     "output_tokens": 58
+    }
+   }
+  },
+  {
+   "id": "q34",
+   "type": "single",
+   "question": "For the 'Lost in the Middle' study of long-context language models, how much can multi-document QA accuracy of GPT-3.5-Turbo fall when the relevant document sits mid-context?",
+   "answerable": true,
+   "answer": "GPT-3.5-Turbo's multi-document QA performance can drop by more than 20% when relevant information is in the middle of the context [1][2]. In the worst case, performance in the 20- and 30-document settings falls below its closed-book performance of 56.1% [1][2].",
+   "cited": [
+    {
+     "arxiv_id": "2307.03172",
+     "chunk_index": 19
+    },
+    {
+     "arxiv_id": "2307.03172",
+     "chunk_index": 20
+    }
+   ],
+   "usage": {
+    "input_tokens": 3201,
+    "output_tokens": 117
+   },
+   "latency_s": 29.27,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives both points in the reference: a drop of more than 20%, and worst-case performance in the 20- and 30-document settings falling below closed-book performance, plus extra detail that is consistent with the reference.",
+    "usage": {
+     "input_tokens": 783,
+     "output_tokens": 180
+    }
+   }
+  },
+  {
+   "id": "q35",
+   "type": "cross",
+   "question": "How well do GPT-4 judgments line up with human annotators, as reported when the papers on LLM-as-a-judge (MT-Bench) and on Direct Preference Optimization justify using GPT-4 as an evaluator?",
+   "answerable": false,
+   "answer": "The papers provided do not include a Direct Preference Optimization paper, so they do not state how it justifies GPT-4 as an evaluator, and the comparison cannot be answered from them.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3397,
+    "output_tokens": 422
+   },
+   "latency_s": 21.92
+  },
+  {
+   "id": "q36",
+   "type": "unanswerable",
+   "question": "What DPO beta value and learning rate were used when fine-tuning Llama-2 70B on the Anthropic HH dialogue dataset?",
+   "answerable": false,
+   "answer": "The papers provided do not state a DPO beta value or learning rate for fine-tuning Llama-2 70B on the Anthropic HH dialogue dataset.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3688,
+    "output_tokens": 74
+   },
+   "latency_s": 21.11
+  },
+  {
+   "id": "q37",
+   "type": "single",
+   "question": "In Mistral 7B, how much does the fixed-size rolling cache cut memory use when processing a 32k-token sequence, and what position in the cache holds the entry for timestep i?",
+   "answerable": true,
+   "answer": "On a sequence length of 32k tokens, the rolling buffer cache reduces cache memory usage by 8x without impacting model quality [1]. The keys and values for timestep i are stored in position i mod W of the cache [1].",
+   "cited": [
+    {
+     "arxiv_id": "2310.06825",
+     "chunk_index": 5
+    }
+   ],
+   "usage": {
+    "input_tokens": 3496,
+    "output_tokens": 96
+   },
+   "latency_s": 19.59,
+   "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives both points from the reference: an 8x cut in cache memory at 32k tokens, and storage of timestep i at position i mod W.",
+    "usage": {
+     "input_tokens": 857,
+     "output_tokens": 64
+    }
+   }
+  },
+  {
+   "id": "q38",
+   "type": "single",
+   "question": "What value does Self-RAG use for its decision threshold on whether to fetch passages for most tasks, and why is it set differently for ALCE?",
+   "answerable": false,
+   "answer": "The papers provided do not state the specific threshold value Self-RAG uses for most tasks, or why it is set differently for ALCE. They only say that a threshold can be set, and that retrieval is triggered if the probability of Retrieve=Yes surpasses it.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3387,
+    "output_tokens": 106
+   },
+   "latency_s": 44.22
+  },
+  {
+   "id": "q39",
+   "type": "single",
+   "question": "On the synthetic task where the gaps between relevant tokens are randomized, how far did the Mamba selective SSM generalize relative to its training length, and how far did competing methods get?",
+   "answerable": false,
+   "answer": "The papers provided do not state a length-generalization result for the Selective Copying task, where token spacing is randomized. They only give its training setup and accuracy. The extrapolation figures (4000× longer, versus no more than 2× for other methods) are reported for the separate Induction Heads task.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3635,
+    "output_tokens": 436
+   },
+   "latency_s": 45.0
+  },
+  {
+   "id": "q40",
+   "type": "single",
+   "question": "According to the retrieval-augmented generation survey, what problems arise in the retrieval step of the earliest RAG paradigm?",
+   "answerable": false,
+   "answer": "The papers provided do not state which problems arise in the retrieval step of Naive RAG. They only say that Naive RAG is the earliest paradigm and that it has several limitations, which Advanced and Modular RAG respond to, without detailing them.",
+   "cited": [],
+   "usage": {
+    "input_tokens": 3241,
+    "output_tokens": 100
+   },
+   "latency_s": 37.68
+  }
+ ]
+}

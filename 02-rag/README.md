@@ -3,32 +3,42 @@
 **Checkpoint:** ablation table, 3 failures fixed (and how), 1 failure deliberately not fixed (and why). Design doc in `DESIGN.md`.
 
 ## Ablation
-Retrieval only so far: 34 answerable questions, so one question is 2.9 points and differences under
-~16 points are noise. Same index (bge-small, 1500/500 chars) for every row. Reproduce:
-`PYTHONPATH=scripts uv run --active python scripts/eval_ablation.py` (results in `results/ablation_retrieval.json`).
+34 answerable questions, so one question is 2.9 points and differences under ~16 points are noise. Same
+embedding model and chunking (bge-small, 1500/500 chars) for every row. Reproduce retrieval:
+`PYTHONPATH=scripts uv run --active python scripts/eval_ablation.py` (and `eval_contextual.py`); answers and judging:
+`scripts/eval_answers.py` (results in `results/`).
 
-| Variant | recall@5 | paper recall@5 | Answer quality | Cost/query | Latency (median, retrieval) |
+| Variant | recall@5 | paper recall@5 | Answer quality | Serving cost/query | End-to-end latency (median) |
 |---|---|---|---|---|---|
-| Baseline dense | 0.353 | 0.853 | **0.397** | $0.0081 | 0.014 s retrieval, 1.65 s end to end |
-| BM25 only | 0.441 | 0.882 | | | 0.012 s |
-| + BM25 hybrid (RRF) | 0.382 | 0.912 | | | 0.024 s |
-| + Reranker (bge-reranker-base, top 20) | **0.559** | 0.941 | | | 7.8 s (CPU) |
-| + Reranker (MiniLM-L-12, top 20) | 0.441 | 0.941 | | | 7.2 s (CPU) |
-| + Reranker (MiniLM-L-6, top 20) | 0.441 | 0.941 | | | 2.7 s (CPU) |
-| + Contextual chunks, dense | 0.559 | 0.853 | | one-time $1.97 to index | 0.012 s |
-| + Contextual chunks, BM25 | 0.559 | 0.912 | | (same) | 0.010 s |
-| + Contextual chunks, hybrid (RRF) | 0.559 | 0.912 | **0.618** | $0.0081 (+ one-time index) | 0.024 s retrieval, 1.67 s end to end |
-| + Contextual chunks, hybrid + reranker | **0.618** | 0.882 | | (same) | 6.9 s (CPU) |
+| Baseline dense | 0.353 | 0.853 | 0.397 | $0.0081 | 1.65 s |
+| BM25 only | 0.441 | 0.882 | 0.544 | $0.0081 | 1.75 s |
+| + BM25 hybrid (RRF) | 0.382 | 0.912 | 0.471 | $0.0080 | 1.87 s |
+| + Reranker (bge-reranker-base, top 20) | 0.559 | 0.941 | 0.662 | $0.0083 | 21.04 s |
+| + Reranker (MiniLM-L-12, top 20) | 0.441 | 0.941 | not judged | | retrieval alone 7.2 s |
+| + Reranker (MiniLM-L-6, top 20) | 0.441 | 0.941 | not judged | | retrieval alone 2.7 s |
+| + Contextual chunks, dense | 0.559 | 0.853 | not judged | one-time $1.97 to index | retrieval alone 0.012 s |
+| + Contextual chunks, BM25 | 0.559 | 0.912 | not judged | (same) | retrieval alone 0.010 s |
+| + Contextual chunks, hybrid (RRF) | 0.559 | 0.912 | **0.618** | $0.0081 (+ one-time index) | 1.67 s |
+| + Contextual chunks, hybrid + reranker | **0.618** | 0.882 | **0.691** | $0.0082 (+ one-time index) | 17.86 s |
 
-Answer quality = Opus 5.5 judge (prompt `judge_v2`) against the reference answer and evidence quote (correct 1, partial 0.5, wrong or
-abstained 0), averaged over the 34 answerable questions; Sonnet 5.5 answers from the top 5 chunks. Judged for two
-variants so far (`scripts/eval_answers.py`, `results/answers_*.json`); other rows are retrieval-only.
+Answer quality = Opus 5.5 judge (prompt `judge_v2`) against the reference answer and evidence quote (correct 1,
+partial 0.5, wrong or abstained 0), averaged over the 34 answerable questions; Sonnet 5.5 answers from the top 5 chunks.
+The four rows named in the plan (baseline, hybrid, reranker, contextual) plus BM25 and the best combination are judged;
+rows marked "not judged" are retrieval-only. Trap questions: 6/6 abstained for every variant. Every variant answered
+all 40 questions (4 transient network/judge errors were re-run).
 
 **Reading it**
 - **Answer quality moves with retrieval:** 0.397 -> 0.618 from dense to contextual hybrid (8 questions better, 1 worse; judge v2, see Judge check).
   Almost no wrong answers (judge v2: 2 incorrect for dense, 1 for contextual hybrid, all of the kind 'the sources do not say'). Nearly every loss is the model abstaining when the evidence was not
   retrieved (18 of 34 abstentions for dense, 12 for contextual hybrid). Traps: 6/6 abstained for both.
-- The judge has not been checked against human grading yet, and 34 questions is small (one question = 2.9 points).
+- **Ranking by answer quality:** contextual hybrid + reranker 0.691 > plain hybrid + reranker 0.662 > contextual hybrid 0.618
+  > BM25 0.544 > hybrid 0.471 > dense 0.397. Adding the reranker on top of contextual hybrid (+0.07, about 2 questions) is
+  within noise, but costs ~16 s more per query on CPU. **Best trade-off: contextual hybrid** (0.618 at 1.7 s, no extra per-query cost).
+- Wrong answers stay rare in every variant (0-2 of 34); what changes is how often the system declines to answer
+  because the passage was not retrieved (18 for dense down to 8 for contextual hybrid + reranker).
+- The reranker rows' end-to-end latency (17-21 s) is higher than the 7 s measured for retrieval alone; I have not isolated why
+  (the run overlapped other work on the machine), so treat the exact figure loosely. It is slow either way.
+- The judge is checked against 12 human grades only (see Judge check); 34 questions is small (one question = 2.9 points).
 - The reranker is the only change that clearly helps: versus dense it gains 8 questions and loses 1 at recall@5.
 - BM25 alone beats dense (gains 6, loses 3): these questions use exact terms (model names, numbers).
 - Plain RRF hybrid (+2/-1 vs dense) is within noise and does not beat BM25 alone.

@@ -67,7 +67,7 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 - [x] BM25 hybrid search
 - [x] Reranker
 - [x] Contextual chunking
-- [ ] Ablation table: recall@k + answer quality per variant
+- [x] Ablation table: recall@k + answer quality per variant
 - [ ] Ragas wired in
 
 **Resources**

@@ -21,14 +21,19 @@ def load_state(questions_path: Path, verdicts_path: Path) -> dict:
 
 
 def save_verdict(
-    questions_path: Path, verdicts_path: Path, question_id: str, verdict: str, note: str
+    questions_path: Path,
+    verdicts_path: Path,
+    question_id: str,
+    verdict: str,
+    note: str,
+    allowed: tuple[str, ...] = VERDICTS,
 ) -> dict:
     """Record one verdict, replacing any earlier one for that question. Returns all verdicts."""
     state = load_state(questions_path, verdicts_path)
     if question_id not in {q["id"] for q in state["questions"]}:
         raise ValueError(f"unknown question id: {question_id!r}")
-    if verdict not in VERDICTS:
-        raise ValueError(f"verdict must be one of {VERDICTS}")
+    if verdict not in allowed:
+        raise ValueError(f"verdict must be one of {allowed}")
     if not isinstance(note, str) or len(note) > MAX_NOTE_CHARS:
         raise ValueError(f"note must be text of at most {MAX_NOTE_CHARS} characters")
     updated = {**state["verdicts"], question_id: {"verdict": verdict, "note": note}}

@@ -1,0 +1,82 @@
+{
+  "current_round": 0,
+  "reps": 3,
+  "goal": {
+    "target": "target",
+    "direction": "higher",
+    "hold": [
+      "title",
+      "authors",
+      "datasets",
+      "key_results",
+      "problem"
+    ]
+  },
+  "approve_each_round": false,
+  "split": "none (all 50 records, directional)",
+  "best": {
+    "round": 0,
+    "score": 0.942
+  },
+  "budget_usd": 25,
+  "spend_usd": 2.96,
+  "noise": {
+    "target_ci95_halfwidth": 0.044,
+    "rep_means": [
+      0.945,
+      0.935,
+      0.945
+    ]
+  },
+  "artifact": "01-extractor/prompts/extract_paper_v2.md (new versions: extract_paper_v4.md ...)",
+  "off_limits": [
+    "evals/golden/*",
+    "evals/RUBRIC.md",
+    "prompts/judge_v1.md",
+    "src/extractor/scoring.py",
+    "src/extractor/schema.py",
+    "prompts v1-v3"
+  ],
+  "runner": "cd 01-extractor && uv run --env-file ../.env python scripts/run_hillclimb_round.py ../.claude/hillclimb/extractor/<round> <prompt_version> --reps 3 --concurrency 4",
+  "harness_paths": [
+    "01-extractor/scripts/run_hillclimb_round.py",
+    "01-extractor/src/extractor/hillclimb.py",
+    "01-extractor/src/extractor/scoring.py",
+    "01-extractor/src/extractor/judge.py"
+  ],
+  "metrics": [
+    {
+      "id": "target",
+      "kind": "float"
+    },
+    {
+      "id": "limitations",
+      "kind": "float"
+    },
+    {
+      "id": "method",
+      "kind": "judge"
+    },
+    {
+      "id": "problem",
+      "kind": "judge"
+    },
+    {
+      "id": "datasets",
+      "kind": "float"
+    },
+    {
+      "id": "key_results",
+      "kind": "float"
+    },
+    {
+      "id": "title",
+      "kind": "float"
+    },
+    {
+      "id": "authors",
+      "kind": "float"
+    }
+  ],
+  "status": "stopped after baseline: analyzer found no prompt change above noise"
+}

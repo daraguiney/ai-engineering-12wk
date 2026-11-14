@@ -1,0 +1,180 @@
+[
+ {
+  "id": "g01",
+  "type": "single",
+  "question": "How much does low-rank adaptation of GPT-3 175B shrink the amount of GPU memory needed during training compared with full fine-tuning?",
+  "reference": "From 1.2TB to 350GB.",
+  "evidence": [
+   {
+    "arxiv_id": "2106.09685",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "quote": "On GPT-3 175B, we reduce the VRAM consumption during training from 1.2TB to 350GB."
+   }
+  ],
+  "answer": "On GPT-3 175B, LoRA reduces VRAM consumption during training from 1.2TB to 350GB compared with full fine-tuning."
+ },
+ {
+  "id": "g02",
+  "type": "single",
+  "question": "According to the neural language model scaling-law study, as the model size N is increased, how should the dataset size D grow, and with what exponent?",
+  "reference": "Data should grow sublinearly, D ~ N^0.74.",
+  "evidence": [
+   {
+    "arxiv_id": "2001.08361",
+    "title": "Scaling Laws for Neural Language Models",
+    "quote": "Equation (1.1) and (1.2) together suggest that as we increase the model size, we should increase the dataset size sublinearly according to D ∝N αN αD ∼N 0.74."
+   }
+  ],
+  "answer": "The dataset size should grow sublinearly with model size, as D ∝ N^(αN/αD) ∼ N^0.74 [1]. To avoid overfitting, the paper gives D ≳ (5 × 10^3) N^0.74 [5]."
+ },
+ {
+  "id": "g03",
+  "type": "cross",
+  "question": "How well do GPT-4 judgments line up with human annotators, as reported when the papers on LLM-as-a-judge (MT-Bench) and on Direct Preference Optimization justify using GPT-4 as an evaluator?",
+  "reference": "MT-Bench: 85% GPT-4-human vs 81% human-human (non-tie). DPO: GPT-4 agreement with humans similar or higher than inter-annotator agreement.",
+  "evidence": [
+   {
+    "arxiv_id": "2306.05685",
+    "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+    "quote": "The agreement under setup S2 (w/o tie) between GPT-4 and humans reaches 85%, which is even higher than the agreement among humans (81%)."
+   },
+   {
+    "arxiv_id": "2305.18290",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "quote": "We find GPT-4 judgments correlate strongly with humans, with human agreement with GPT-4 typically similar or higher than inter-human annotator agreement."
+   }
+  ],
+  "answer": "The MT-Bench paper reports that the GPT-4 judge matches human evaluations at an agreement rate exceeding 80%, the same level as human-human agreement [5]. The DPO paper finds GPT-4 judgments correlate strongly with humans, with human agreement with GPT-4 typically similar or higher than inter-human annotator agreement [3]."
+ },
+ {
+  "id": "g04",
+  "type": "single",
+  "question": "For the 'Lost in the Middle' study of long-context language models, how much can multi-document QA accuracy of GPT-3.5-Turbo fall when the relevant document sits mid-context?",
+  "reference": "By more than 20%; in worst case below closed-book performance.",
+  "evidence": [
+   {
+    "arxiv_id": "2307.03172",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "quote": "GPT-3.5-Turbo’s multi-document QA performance can drop by more than 20%—in the worst case, performance in 20- and 30-document settings is lower than per-formance without any input documents"
+   }
+  ],
+  "answer": "GPT-3.5-Turbo's multi-document QA performance can drop by more than 20% when relevant information is in the middle of the context [1][4]. In the worst case, performance in 20- and 30-document settings falls below closed-book performance (56.1%) [1][4]."
+ },
+ {
+  "id": "g05",
+  "type": "single",
+  "question": "At roughly what model size did Toolformer's gains from calling external APIs begin to show up in the GPT-2 family experiments?",
+  "reference": "Around 775M parameters; smaller models perform similarly with or without tools.",
+  "evidence": [
+   {
+    "arxiv_id": "2302.04761",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "quote": "the ability to leverage the provided tools only emerges at around 775M parameters: smaller models achieve similar performance both with and without tools."
+   }
+  ],
+  "answer": "In the scaling experiments, the ability to leverage the provided tools only emerges at around 775M parameters; smaller models perform similarly with and without tools. The exception is the Wikipedia search engine, mostly used for QA benchmarks, which the authors hypothesize is because the API is comparably easy to use."
+ },
+ {
+  "id": "g06",
+  "type": "cross",
+  "question": "How does the way answers are decoded from the language model in the original chain-of-thought prompting evaluation differ from the decoding setup in the self-consistency method for LaMDA-137B?",
+  "reference": "CoT paper: greedy decoding; self-consistency: temperature sampling T=0.5, top-k 40, then aggregate.",
+  "evidence": [
+   {
+    "arxiv_id": "2201.11903",
+    "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+    "quote": "We sample from the models via greedy decoding (though follow-up work shows chain-of-thought prompting can be improved by taking the majority ﬁnal answer over many sampled generations"
+   },
+   {
+    "arxiv_id": "2203.11171",
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+    "quote": "for UL2-20B and LaMDA-137B we applied temperature sampling with T = 0.5 and truncated at the top-k (k = 40) tokens with the highest probability"
+   }
+  ],
+  "answer": "The CoT-prompting baseline uses greedy decoding, taking a single reasoning path [4][2]. Self-consistency instead samples a diverse set of reasoning paths from the decoder (40 outputs per run, averaged over 10 runs) and marginalizes them out to choose the most consistent answer [4][5]. The sources do not give any LaMDA-137B-specific decoding setup beyond this general one."
+ },
+ {
+  "id": "g07",
+  "type": "single",
+  "question": "What hardware, number of optimisation steps, mini-batch size and learning rate did the REALM authors use for its pre-training phase?",
+  "reference": "64 Google Cloud TPUs, 200k steps, batch size 512, learning rate 3e-5.",
+  "evidence": [
+   {
+    "arxiv_id": "2002.08909",
+    "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "quote": "We pre-train for 200k steps on 64 Google Cloud TPUs, with a batch size of 512 and a learning rate of 3e-5, using BERT’s default optimizer."
+   }
+  ],
+  "answer": "REALM was pre-trained for 200k steps on 64 Google Cloud TPUs, with a batch size of 512 and a learning rate of 3e-5, using BERT's default optimizer. The document embedding step for the MIPS index was parallelized over 16 TPUs."
+ },
+ {
+  "id": "g08",
+  "type": "single",
+  "question": "In the denoising diffusion model that reached an FID of 3.17 on CIFAR10, how are the noise levels of the forward process set across the sampling chain, and what are the endpoint values?",
+  "reference": "Fixed constants rising linearly from 1e-4 to 0.02 (T=1000).",
+  "evidence": [
+   {
+    "arxiv_id": "2006.11239",
+    "title": "Denoising Diffusion Probabilistic Models",
+    "quote": "We set the forward process variances to constants increasing linearly from β1 = 10−4 to βT = 0.02. These constants were chosen to be small relative to data scaled to [−1, 1]"
+   }
+  ],
+  "answer": "The forward process variances are set to constants increasing linearly from β1 = 10−4 to βT = 0.02, with T = 1000 [1][2]. They were chosen to be small relative to data scaled to [−1, 1], and LT = DKL(q(xT|x0) ∥ N(0, I)) is ≈ 10−5 bits per dimension [1]. The FID of 3.17 on CIFAR10 is from the same model [1]."
+ },
+ {
+  "id": "g09",
+  "type": "single",
+  "question": "In the WebGPT browser-assisted question-answering work, how does the approach of drawing several candidate answers and keeping the reward model's top pick differ from reinforcement learning in terms of what it costs?",
+  "reference": "Rejection sampling (best-of-n) needs no additional training but uses more inference-time compute.",
+  "evidence": [
+   {
+    "arxiv_id": "2112.09332",
+    "title": "WebGPT: Browser-assisted question-answering with human feedback",
+    "quote": "We used this as an alternative method of optimizing against the reward model, which requires no additional training, but instead uses more inference-time compute."
+   }
+  ],
+  "answer": "The sources say that rejection sampling (best-of-n against the reward model) was combined with behavior cloning in the best model, and that RL gave some benefit only when inference-time compute is more limited [1]. RL did not provide significant benefit when combined with rejection sampling, so it was excluded from the WebGPT models, which use best-of-4, best-of-16 and best-of-64 to correspond to different inference-time compute budgets [3]. The sources do not give a detailed cost comparison beyond this."
+ },
+ {
+  "id": "g10",
+  "type": "single",
+  "question": "According to the retrieval-augmented generation survey, what problems arise in the retrieval step of the earliest RAG paradigm?",
+  "reference": "Struggles with precision and recall: misaligned/irrelevant chunks selected, crucial information missed.",
+  "evidence": [
+   {
+    "arxiv_id": "2312.10997",
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "quote": "The retrieval phase often struggles with precision and recall, leading to the selection of misaligned or irrelevant chunks, and the missing of crucial information."
+   }
+  ],
+  "answer": "In Naive RAG, the retrieval phase often struggles with precision and recall, which leads to the selection of misaligned or irrelevant chunks and the missing of crucial information [2]."
+ },
+ {
+  "id": "g11",
+  "type": "single",
+  "question": "In the WebGPT browser-assisted question-answering work, how does the approach of drawing several candidate answers and keeping the reward model's top pick differ from reinforcement learning in terms of what it costs?",
+  "reference": "Rejection sampling (best-of-n) needs no additional training but uses more inference-time compute.",
+  "evidence": [
+   {
+    "arxiv_id": "2112.09332",
+    "title": "WebGPT: Browser-assisted question-answering with human feedback",
+    "quote": "We used this as an alternative method of optimizing against the reward model, which requires no additional training, but instead uses more inference-time compute."
+   }
+  ],
+  "answer": "The sources only say that RL provides some benefit when inference-time compute is more limited [3]. Rejection sampling (best-of-n) gave a larger benefit, with the 175B best-of-64 BC model preferred 68% of the time to the 175B BC model, versus 58% for the 175B RL model [5]. They do not spell out the exact compute cost of each method."
+ },
+ {
+  "id": "g12",
+  "type": "single",
+  "question": "How much does low-rank adaptation of GPT-3 175B shrink the amount of GPU memory needed during training compared with full fine-tuning?",
+  "reference": "From 1.2TB to 350GB.",
+  "evidence": [
+   {
+    "arxiv_id": "2106.09685",
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "quote": "On GPT-3 175B, we reduce the VRAM consumption during training from 1.2TB to 350GB."
+   }
+  ],
+  "answer": "Compared with GPT-3 175B fine-tuned with Adam, LoRA reduces the GPU memory requirement by 3 times [3][5]. Specifically, VRAM consumption during training drops from 1.2TB to 350GB [2]."
+ }
+]

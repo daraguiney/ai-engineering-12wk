@@ -1,0 +1,62 @@
+{
+ "g01": {
+  "question_id": "q13",
+  "judge": "correct",
+  "variant": "dense"
+ },
+ "g02": {
+  "question_id": "q10",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ },
+ "g03": {
+  "question_id": "q35",
+  "judge": "partial",
+  "variant": "dense"
+ },
+ "g04": {
+  "question_id": "q34",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ },
+ "g05": {
+  "question_id": "q23",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ },
+ "g06": {
+  "question_id": "q20",
+  "judge": "partial",
+  "variant": "dense"
+ },
+ "g07": {
+  "question_id": "q09",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ },
+ "g08": {
+  "question_id": "q12",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ },
+ "g09": {
+  "question_id": "q17",
+  "judge": "partial",
+  "variant": "ctx_hybrid"
+ },
+ "g10": {
+  "question_id": "q40",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ },
+ "g11": {
+  "question_id": "q17",
+  "judge": "partial",
+  "variant": "dense"
+ },
+ "g12": {
+  "question_id": "q13",
+  "judge": "correct",
+  "variant": "ctx_hybrid"
+ }
+}

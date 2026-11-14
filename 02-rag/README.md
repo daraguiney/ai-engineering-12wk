@@ -43,3 +43,15 @@ variants so far (`scripts/eval_answers.py`, `results/answers_*.json`); other row
 - Contextual hybrid has the best top-1 (0.441) and recall@10 (0.735) at 0.024 s per query. Adding the reranker on top
   gives 0.618 at recall@5, but +3/-1 over the plain reranker is within noise and costs ~7 s per query.
 - Cross-paper questions are still 0/5 at recall@5 with every variant, contextual ones included: top-k retrieval returns chunks for one paper and does not fix questions that need two. Next idea (untested): retrieve per paper, then merge.
+
+## Judge check (human grading, 2026-11-14)
+12 answers graded blind by the owner (`review_app/grade_server.py`; items `testset/grading_items.json`, judge key
+`results/grading_key.json`, comparison `results/judge_vs_human.json`). The sample is every judge-"partial" answer (4)
+plus 8 random judge-"correct" ones, so it is not a random draw of all answers.
+- **Exact agreement 7/12.** Judge "correct" was confirmed 7 of 8 times by the human.
+- **The judge is too lenient on answers that wrongly say "the sources do not state X" when X is in the reference.**
+  3 of the 4 judge-"partial" answers were graded "incorrect" by the human, all of this kind (g06, g09, g11).
+- One judge "partial" was graded "correct" (g03: vague "exceeding 80%" where the reference has 85% vs 81%), and one
+  judge "correct" was graded "incorrect" (g05: the answer adds an off-topic Wikipedia exception to the right threshold).
+- Effect on the headline: counting only "correct" (no half credit) gives dense 0.382 vs contextual hybrid 0.618,
+  the same direction and gap as the 0.426 vs 0.632 above. Half credit for partials flatters both variants slightly.

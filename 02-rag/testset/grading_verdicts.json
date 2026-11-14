@@ -1,0 +1,50 @@
+{
+ "g01": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g02": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g03": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g04": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g05": {
+  "verdict": "incorrect",
+  "note": " The exception is the Wikipedia search engine, mostly used for QA benchmarks, which the authors hypothesize is because the API is comparably easy to use."
+ },
+ "g06": {
+  "verdict": "incorrect",
+  "note": ""
+ },
+ "g07": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g08": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g09": {
+  "verdict": "incorrect",
+  "note": ""
+ },
+ "g10": {
+  "verdict": "correct",
+  "note": ""
+ },
+ "g11": {
+  "verdict": "incorrect",
+  "note": ""
+ },
+ "g12": {
+  "verdict": "correct",
+  "note": ""
+ }
+}

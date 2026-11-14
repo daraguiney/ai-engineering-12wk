@@ -1,0 +1,42 @@
+{
+ "graded": 12,
+ "agree": 7,
+ "disagreements": [
+  {
+   "id": "g03",
+   "question_id": "q35",
+   "judge": "partial",
+   "human": "correct",
+   "note": ""
+  },
+  {
+   "id": "g05",
+   "question_id": "q23",
+   "judge": "correct",
+   "human": "incorrect",
+   "note": " The exception is the Wikipedia search engine, mostly used for QA benchmarks, which the authors hypothesize is because the API is comparably easy to use."
+  },
+  {
+   "id": "g06",
+   "question_id": "q20",
+   "judge": "partial",
+   "human": "incorrect",
+   "note": ""
+  },
+  {
+   "id": "g09",
+   "question_id": "q17",
+   "judge": "partial",
+   "human": "incorrect",
+   "note": ""
+  },
+  {
+   "id": "g11",
+   "question_id": "q17",
+   "judge": "partial",
+   "human": "incorrect",
+   "note": ""
+  }
+ ],
+ "note": "12 items: all 4 judge-partial + 8 random judge-correct (not a random sample of all answers)"
+}

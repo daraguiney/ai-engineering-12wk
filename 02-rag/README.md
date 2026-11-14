@@ -9,7 +9,7 @@ Retrieval only so far: 34 answerable questions, so one question is 2.9 points an
 
 | Variant | recall@5 | paper recall@5 | Answer quality | Cost/query | Latency (median, retrieval) |
 |---|---|---|---|---|---|
-| Baseline dense | 0.353 | 0.853 | **0.426** | $0.0081 | 0.014 s retrieval, 1.65 s end to end |
+| Baseline dense | 0.353 | 0.853 | **0.397** | $0.0081 | 0.014 s retrieval, 1.65 s end to end |
 | BM25 only | 0.441 | 0.882 | | | 0.012 s |
 | + BM25 hybrid (RRF) | 0.382 | 0.912 | | | 0.024 s |
 | + Reranker (bge-reranker-base, top 20) | **0.559** | 0.941 | | | 7.8 s (CPU) |
@@ -17,16 +17,16 @@ Retrieval only so far: 34 answerable questions, so one question is 2.9 points an
 | + Reranker (MiniLM-L-6, top 20) | 0.441 | 0.941 | | | 2.7 s (CPU) |
 | + Contextual chunks, dense | 0.559 | 0.853 | | one-time $1.97 to index | 0.012 s |
 | + Contextual chunks, BM25 | 0.559 | 0.912 | | (same) | 0.010 s |
-| + Contextual chunks, hybrid (RRF) | 0.559 | 0.912 | **0.632** | $0.0081 (+ one-time index) | 0.024 s retrieval, 1.67 s end to end |
+| + Contextual chunks, hybrid (RRF) | 0.559 | 0.912 | **0.618** | $0.0081 (+ one-time index) | 0.024 s retrieval, 1.67 s end to end |
 | + Contextual chunks, hybrid + reranker | **0.618** | 0.882 | | (same) | 6.9 s (CPU) |
 
-Answer quality = Opus 5.5 judge against the reference answer and evidence quote (correct 1, partial 0.5, wrong or
+Answer quality = Opus 5.5 judge (prompt `judge_v2`) against the reference answer and evidence quote (correct 1, partial 0.5, wrong or
 abstained 0), averaged over the 34 answerable questions; Sonnet 5.5 answers from the top 5 chunks. Judged for two
 variants so far (`scripts/eval_answers.py`, `results/answers_*.json`); other rows are retrieval-only.
 
 **Reading it**
-- **Answer quality moves with retrieval:** 0.426 -> 0.632 from dense to contextual hybrid (8 questions better, 1 worse).
-  Neither variant gave a wrong answer: 0 incorrect of 34. Every loss is the model abstaining when the evidence was not
+- **Answer quality moves with retrieval:** 0.397 -> 0.618 from dense to contextual hybrid (8 questions better, 1 worse; judge v2, see Judge check).
+  Almost no wrong answers (judge v2: 2 incorrect for dense, 1 for contextual hybrid, all of the kind 'the sources do not say'). Nearly every loss is the model abstaining when the evidence was not
   retrieved (18 of 34 abstentions for dense, 12 for contextual hybrid). Traps: 6/6 abstained for both.
 - The judge has not been checked against human grading yet, and 34 questions is small (one question = 2.9 points).
 - The reranker is the only change that clearly helps: versus dense it gains 8 questions and loses 1 at recall@5.
@@ -55,3 +55,10 @@ plus 8 random judge-"correct" ones, so it is not a random draw of all answers.
   judge "correct" was graded "incorrect" (g05: the answer adds an off-topic Wikipedia exception to the right threshold).
 - Effect on the headline: counting only "correct" (no half credit) gives dense 0.382 vs contextual hybrid 0.618,
   the same direction and gap as the 0.426 vs 0.632 above. Half credit for partials flatters both variants slightly.
+
+**Judge v2 (added after the check above).** One rule: an answer that says the sources do not state something the
+reference does state is *incorrect*, not partial. Re-judged all saved answers (`scripts/rejudge.py`, v1 verdicts kept as
+`judge_v1`): agreement with the 12 human grades rose from 7/12 to **10/12**. The two remaining disagreements are g03
+(judge stricter than the human on vague numbers) and g05 (extra Wikipedia clause); I left the rubric alone for those
+rather than tune to 12 samples. Headline answer quality under v2: dense 0.397, contextual hybrid 0.618. The judge is
+"checked against 12 human grades", not validated.

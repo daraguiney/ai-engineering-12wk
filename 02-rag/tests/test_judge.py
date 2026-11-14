@@ -30,3 +30,10 @@ def test_judge_answer_returns_score_and_usage():
 
     out = judge_answer("q", "ref", ["quote"], "ans", client=Client())
     assert out["score"] == 0.5 and out["verdict"] == "partial" and out["usage"]["input_tokens"] == 300
+
+
+def test_v2_treats_a_false_sources_do_not_say_claim_as_incorrect_and_v1_is_unchanged():
+    v2 = build_judge_prompt("q", "ref", [], "ans")
+    v1 = build_judge_prompt("q", "ref", [], "ans", version="v1")
+    assert "do not state something that the reference does state" in v2
+    assert "do not state something that the reference does state" not in v1

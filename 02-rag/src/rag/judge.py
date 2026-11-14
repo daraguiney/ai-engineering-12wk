@@ -7,7 +7,8 @@ from pydantic import BaseModel
 JUDGE_MODEL = "claude-opus-5-5"
 JUDGE_MAX_TOKENS = 512
 JUDGE_MAX_RETRIES = 2
-PROMPT_PATH = Path(__file__).resolve().parents[2] / "prompts" / "judge_v1.md"
+PROMPTS_DIR = Path(__file__).resolve().parents[2] / "prompts"
+JUDGE_PROMPT_VERSION = "v2"
 SCORES = {"correct": 1.0, "partial": 0.5, "incorrect": 0.0}
 
 
@@ -20,12 +21,14 @@ def verdict_score(verdict: str) -> float:
     return SCORES[verdict]
 
 
-def build_judge_prompt(question: str, expected: str, quotes: list[str], answer: str) -> str:
+def build_judge_prompt(
+    question: str, expected: str, quotes: list[str], answer: str, version: str = JUDGE_PROMPT_VERSION
+) -> str:
     if not expected.strip():
         raise ValueError("a reference answer is required to judge")
     quote_block = "\n".join(f'- "{q}"' for q in quotes)
     return (
-        PROMPT_PATH.read_text(encoding="utf-8")
+        (PROMPTS_DIR / f"judge_{version}.md").read_text(encoding="utf-8")
         .replace("{question}", question)
         .replace("{expected}", expected)
         .replace("{quotes}", quote_block)

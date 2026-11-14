@@ -6,20 +6,21 @@
   "answerable": 34,
   "errors": 0,
   "judge_errors": 0,
-  "correctness": 0.426,
+  "correctness": 0.397,
   "verdicts": {
    "correct": 13,
-   "partial": 3,
-   "incorrect": 0
+   "partial": 1,
+   "incorrect": 2
   },
   "wrongly_abstained": 18,
   "trap_abstained": "6/6",
   "serving_cost_per_query_usd": 0.0081,
   "median_latency_s": 1.65,
   "judge_tokens": {
-   "input": 11607,
-   "output": 1748
-  }
+   "input": 12567,
+   "output": 1858
+  },
+  "judge_prompt": "v2"
  },
  "records": [
   {
@@ -40,6 +41,15 @@
    },
    "latency_s": 1.62,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives both facts in the reference: a minibatch of 80 sentences per update and about 5 days of training per model.",
+    "usage": {
+     "input_tokens": 708,
+     "output_tokens": 56
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate gives both facts in the reference: a minibatch of 80 sentences per update and about 5 days of training per model.",
@@ -67,6 +77,15 @@
    },
    "latency_s": 1.23,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate correctly gives 7.93% test error for the 1202-layer network, which matches the reference, and its added detail about training error below 0.1% is accurate.",
+    "usage": {
+     "input_tokens": 793,
+     "output_tokens": 69
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate correctly states the 7.93% test error for the 1202-layer network, matching the reference; the extra details are true.",
@@ -174,6 +193,15 @@
    "judge": {
     "verdict": "correct",
     "score": 1.0,
+    "reason": "The candidate gives all four values from the reference: 64 Google Cloud TPUs, 200k steps, batch size 512 and learning rate 3e-5, and adds only true extra detail.",
+    "usage": {
+     "input_tokens": 780,
+     "output_tokens": 84
+    }
+   },
+   "judge_v1": {
+    "verdict": "correct",
+    "score": 1.0,
     "reason": "The candidate gives all four reference values (64 Google Cloud TPUs, 200k steps, batch size 512, learning rate 3e-5), and its extra detail about the 16 TPUs used for document embedding does not contradict the reference.",
     "usage": {
      "input_tokens": 720,
@@ -231,6 +259,15 @@
    "judge": {
     "verdict": "correct",
     "score": 1.0,
+    "reason": "The candidate matches the reference: the forward-process variances are fixed constants that rise linearly from 1e-4 to 0.02 with T=1000, and the extra detail it adds is consistent with the paper.",
+    "usage": {
+     "input_tokens": 817,
+     "output_tokens": 83
+    }
+   },
+   "judge_v1": {
+    "verdict": "correct",
+    "score": 1.0,
     "reason": "The candidate matches the reference: the betas are fixed constants that rise linearly from 1e-4 to 0.02 with T=1000, and the extra details it adds are consistent with the paper.",
     "usage": {
      "input_tokens": 757,
@@ -256,6 +293,15 @@
    },
    "latency_s": 1.48,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same reduction as the reference, from 1.2TB to 350GB of VRAM during training for GPT-3 175B.",
+    "usage": {
+     "input_tokens": 693,
+     "output_tokens": 62
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate gives the same figures as the reference: VRAM drops from 1.2TB to 350GB.",
@@ -302,6 +348,15 @@
    "judge": {
     "verdict": "correct",
     "score": 1.0,
+    "reason": "The candidate gives the same 34.5% accuracy figure for unspecialized Mechanical Turk workers that the reference states.",
+    "usage": {
+     "input_tokens": 674,
+     "output_tokens": 64
+    }
+   },
+   "judge_v1": {
+    "verdict": "correct",
+    "score": 1.0,
     "reason": "The candidate gives the same 34.5% accuracy for non-specialist Amazon Mechanical Turk workers that the reference states.",
     "usage": {
      "input_tokens": 614,
@@ -344,6 +399,15 @@
    },
    "latency_s": 3.88,
    "judge": {
+    "verdict": "incorrect",
+    "score": 0.0,
+    "reason": "The reference says rejection sampling needs no additional training but uses more inference-time compute. The candidate misses this and claims the sources do not spell out the cost of each method, implying the information is absent when the paper states it.",
+    "usage": {
+     "input_tokens": 802,
+     "output_tokens": 86
+    }
+   },
+   "judge_v1": {
     "verdict": "partial",
     "score": 0.5,
     "reason": "The candidate implies best-of-n costs more inference-time compute by noting RL helps when that compute is limited, but it never says rejection sampling needs no additional training and wrongly claims the sources don't spell out the cost trade-off.",
@@ -381,6 +445,15 @@
    "judge": {
     "verdict": "correct",
     "score": 1.0,
+    "reason": "The candidate gives the same figures as the reference: MultiArith accuracy rose from 17.7% with plain zero-shot to 78.7% with Zero-shot-CoT on InstructGPT; its remark about the trigger phrase not being quoted does not deny anything the reference states.",
+    "usage": {
+     "input_tokens": 827,
+     "output_tokens": 333
+    }
+   },
+   "judge_v1": {
+    "verdict": "correct",
+    "score": 1.0,
     "reason": "The candidate gives both figures from the reference, 17.7% for the plain zero-shot baseline and 78.7% for Zero-shot-CoT on MultiArith with InstructGPT, so it matches fully.",
     "usage": {
      "input_tokens": 767,
@@ -410,6 +483,15 @@
    },
    "latency_s": 1.66,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate correctly names AdamW in place of Adam and gives the same reason: it improves language modelling loss and downstream task performance after finetuning.",
+    "usage": {
+     "input_tokens": 773,
+     "output_tokens": 65
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate matches the reference: Chinchilla used AdamW instead of Adam because it improves language modelling loss and downstream task performance after finetuning.",
@@ -445,6 +527,15 @@
    },
    "latency_s": 2.16,
    "judge": {
+    "verdict": "incorrect",
+    "score": 0.0,
+    "reason": "The candidate correctly names greedy decoding for CoT, but it says the sources give no LaMDA-137B-specific decoding setup, whereas the paper specifies temperature sampling with T=0.5 and top-k=40.",
+    "usage": {
+     "input_tokens": 902,
+     "output_tokens": 156
+    }
+   },
+   "judge_v1": {
     "verdict": "partial",
     "score": 0.5,
     "reason": "The candidate correctly identifies greedy decoding for chain-of-thought and sampling plus aggregation for self-consistency, but it omits the LaMDA-specific settings (T=0.5, top-k=40) and wrongly says the sources give none.",
@@ -487,6 +578,15 @@
    "judge": {
     "verdict": "correct",
     "score": 1.0,
+    "reason": "The candidate says the recomputation is faster despite the extra FLOPs because it greatly reduces HBM accesses, which matches the reference, and its added detail about the stored softmax normalization factor is accurate.",
+    "usage": {
+     "input_tokens": 786,
+     "output_tokens": 85
+    }
+   },
+   "judge_v1": {
+    "verdict": "correct",
+    "score": 1.0,
     "reason": "The candidate says recomputation lowers HBM accesses, which outweighs the extra FLOPs, matching the reference, and its added detail about the stored softmax normalization statistics is accurate.",
     "usage": {
      "input_tokens": 726,
@@ -512,6 +612,15 @@
    },
    "latency_s": 1.6,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives the same ~775M threshold and says smaller models perform similarly with or without tools; its Wikipedia-search exception is extra detail the paper also reports, and it does not contradict the reference.",
+    "usage": {
+     "input_tokens": 720,
+     "output_tokens": 190
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate correctly gives about 775M parameters and says smaller models perform similarly with or without tools; its Wikipedia-search exception is an extra detail that matches the paper.",
@@ -578,6 +687,15 @@
    },
    "latency_s": 1.54,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate matches the reference on both points: the final learning rate is 10% of the maximum, and the weight decay is 0.1.",
+    "usage": {
+     "input_tokens": 746,
+     "output_tokens": 58
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate gives both values from the reference: the learning rate ends at 10% of its maximum, and the weight decay is 0.1.",
@@ -685,6 +803,15 @@
    "judge": {
     "verdict": "correct",
     "score": 1.0,
+    "reason": "The candidate gives both points in the reference: a drop of more than 20%, and worst-case performance in the 20- and 30-document settings falling below closed-book performance; the added 56.1% figure does not contradict the reference.",
+    "usage": {
+     "input_tokens": 781,
+     "output_tokens": 183
+    }
+   },
+   "judge_v1": {
+    "verdict": "correct",
+    "score": 1.0,
     "reason": "The candidate gives both points in the reference: a drop of more than 20%, and worst-case performance in the 20- and 30-document settings falling below closed-book performance; the extra 56.1% figure does not contradict the reference.",
     "usage": {
      "input_tokens": 721,
@@ -714,6 +841,15 @@
    },
    "latency_s": 1.84,
    "judge": {
+    "verdict": "partial",
+    "score": 0.5,
+    "reason": "The DPO claim matches the reference, but for MT-Bench the candidate gives only a vague 'exceeding 80%, same level as humans' instead of the specific 85% GPT-4–human versus 81% human–human (non-tie) figures.",
+    "usage": {
+     "input_tokens": 908,
+     "output_tokens": 212
+    }
+   },
+   "judge_v1": {
     "verdict": "partial",
     "score": 0.5,
     "reason": "The DPO claim matches, but for MT-Bench the candidate only gives a vague 'exceeding 80%, same level as humans' instead of the specific 85% GPT-4–human versus 81% human–human (non-tie) figures.",
@@ -754,6 +890,15 @@
    },
    "latency_s": 1.66,
    "judge": {
+    "verdict": "correct",
+    "score": 1.0,
+    "reason": "The candidate gives both required facts that match the reference: an 8x reduction in cache memory at 32k tokens, and storage of the timestep-i entry at position i mod W.",
+    "usage": {
+     "input_tokens": 857,
+     "output_tokens": 72
+    }
+   },
+   "judge_v1": {
     "verdict": "correct",
     "score": 1.0,
     "reason": "The candidate gives both required facts, an 8x cache memory reduction at 32k tokens and storage at position i mod W, matching the reference.",

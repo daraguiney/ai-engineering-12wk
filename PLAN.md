@@ -68,7 +68,7 @@ Started: 2026-11-07 · Target finish: 2027-01-30
 - [x] Reranker
 - [x] Contextual chunking
 - [x] Ablation table: recall@k + answer quality per variant
-- [ ] Ragas wired in
+- [x] Ragas wired in
 
 **Resources**
 - [ ] 4 · [Cohere Embed and Rerank](https://docs.cohere.com/docs/embeddings)

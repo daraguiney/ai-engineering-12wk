@@ -72,3 +72,20 @@ reference does state is *incorrect*, not partial. Re-judged all saved answers (`
 (judge stricter than the human on vague numbers) and g05 (extra Wikipedia clause); I left the rubric alone for those
 rather than tune to 12 samples. Headline answer quality under v2: dense 0.397, contextual hybrid 0.618. The judge is
 "checked against 12 human grades", not validated.
+
+## Ragas (8-question trial, contextual hybrid, 2026-11-14)
+Ragas 0.4.4 with Sonnet 5.5 as its LLM (`scripts/eval_ragas.py`, `results/ragas_ctx_hybrid.json`). 8 questions: 5 answered
+(4 our-judge "correct", 1 "incorrect") and 3 where the system abstained. Cost **$0.65** for the 8 (about $0.08 per question,
+~12 LLM calls each: 222k input and 20k output tokens), so all 34 answerable questions would be roughly $2.70 per variant.
+
+| Metric | What it showed | Use it? |
+|---|---|---|
+| context recall | 1.0 on all 4 correct answers, 0.0 on the incorrect one, 0 to 0.33 on all 3 abstentions | **Yes.** Agrees with our retrieval labels and shows *why* answers fail (the evidence was not retrieved) without needing quote labels. |
+| faithfulness | 1.0 on the 4 correct answers, 0.71 on the incorrect one | **Yes** for catching claims not in the sources, which our judge does not check. Meaningless on abstentions (0.67 to 1.0 for "the sources do not say"). |
+| context precision | 0.76 to 1.0 on correct answers, 0.0 on all abstentions | Weak signal; consistent with the above but adds little. |
+| factual correctness | **0.0 or 0.67 on 3 answers that both our judge and the human graded correct** (q02, q09, q10) | **No.** q09's answer matches the reference exactly yet scores 0.0. Likely cause: our reference answers are terse fragments ("64 Google Cloud TPUs, 200k steps, ...") that Ragas splits into claims with no subject. Not investigated further. |
+
+Takeaway: Ragas adds faithfulness and a retrieval diagnostic that complement our judge; it does not replace the
+answer-correctness judge, which agrees with human grading (10/12) where Ragas's equivalent does not (3 of 5 correct answers scored 0 or 0.67).
+Only 8 questions and one variant, so this is a trial, not a benchmark. Not run across the other variants.
+

@@ -1,0 +1,107 @@
+{
+ "variant": "ctx_hybrid",
+ "ragas_model": "claude-sonnet-5-5",
+ "tokens": {
+  "input_tokens": 222017,
+  "output_tokens": 20365,
+  "calls": 96
+ },
+ "rows": [
+  {
+   "id": "q01",
+   "answered": true,
+   "our_judge": "correct",
+   "human": null,
+   "ragas": {
+    "faithfulness": 1.0,
+    "context_precision": 0.833,
+    "context_recall": 1.0,
+    "factual_correctness": 0.67
+   }
+  },
+  {
+   "id": "q02",
+   "answered": true,
+   "our_judge": "correct",
+   "human": null,
+   "ragas": {
+    "faithfulness": 1.0,
+    "context_precision": 0.756,
+    "context_recall": 1.0,
+    "factual_correctness": 0.0
+   }
+  },
+  {
+   "id": "q09",
+   "answered": true,
+   "our_judge": "correct",
+   "human": "correct",
+   "ragas": {
+    "faithfulness": 1.0,
+    "context_precision": 1.0,
+    "context_recall": 1.0,
+    "factual_correctness": 0.0
+   }
+  },
+  {
+   "id": "q10",
+   "answered": true,
+   "our_judge": "correct",
+   "human": "correct",
+   "ragas": {
+    "faithfulness": 1.0,
+    "context_precision": 0.804,
+    "context_recall": 1.0,
+    "factual_correctness": 0.0
+   }
+  },
+  {
+   "id": "q17",
+   "answered": true,
+   "our_judge": "incorrect",
+   "human": "incorrect",
+   "ragas": {
+    "faithfulness": 0.714,
+    "context_precision": 0.833,
+    "context_recall": 0.0,
+    "factual_correctness": 0.25
+   }
+  },
+  {
+   "id": "q03",
+   "answered": false,
+   "our_judge": null,
+   "human": null,
+   "ragas": {
+    "faithfulness": 0.667,
+    "context_precision": 0.0,
+    "context_recall": 0.333,
+    "factual_correctness": 0.5
+   }
+  },
+  {
+   "id": "q04",
+   "answered": false,
+   "our_judge": null,
+   "human": null,
+   "ragas": {
+    "faithfulness": 0.8,
+    "context_precision": 0.0,
+    "context_recall": 0.0,
+    "factual_correctness": 0.0
+   }
+  },
+  {
+   "id": "q05",
+   "answered": false,
+   "our_judge": null,
+   "human": null,
+   "ragas": {
+    "faithfulness": 1.0,
+    "context_precision": 0.0,
+    "context_recall": 0.25,
+    "factual_correctness": 0.0
+   }
+  }
+ ]
+}
